@@ -95,6 +95,23 @@ hr {
   margin: 16px 0;
 }
 
+/* News blocks */
+.year-block {
+  margin-bottom: 22px;
+}
+
+.year-block h4 {
+  margin: 18px 0 8px 0;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #ddd;
+  font-weight: 600;
+}
+
+.update {
+  margin: 6px 0;
+  line-height: 1.55;
+}
+
 /* --- Images --- */
 .headshot {
   float: left;
