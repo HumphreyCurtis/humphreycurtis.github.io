@@ -44,6 +44,35 @@ a:hover {
   font-weight: 700;
 }
 
+.media-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.media-list li {
+  margin: 6px 0;
+}
+
+.media-list i {
+  margin-right: 6px;
+  color: #555;
+}
+
+.support-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.aphasia-logo {
+  max-width: 180px; /* controls size */
+  height: auto;
+  margin-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* --- Header / nav --- */
 .header {
   text-align: center;
@@ -52,10 +81,9 @@ a:hover {
 
 .header a {
   display: inline-block;
-  margin: 0 8px;
-  padding: 8px 10px;
-  border-radius: 8px;
-  text-decoration: none;
+  margin: 0 6px;
+  padding: 4px 3px; /* smaller */
+  font-size: 0.85rem; /* slightly smaller text */
 }
 
 .header a:hover {
@@ -84,6 +112,7 @@ hr {
   font-size: 0.9rem;
   color: #555;
 }
+
 .dogs,
 .aphasiaReconnect,
 .humphreyHeadshot,
@@ -94,11 +123,6 @@ hr {
   margin-right: auto;
   border-radius: 12px;
   margin-bottom: 16px;
-}
-
-.aphasiaReconnect {
-  height: 150px;
-  padding-bottom: 10px;
 }
 
 .dogs {
@@ -119,24 +143,13 @@ hr {
 
 /* --- Mobile tweaks --- */
 @media (max-width: 600px) {
-  .headshot {
-    float: none;
-    display: block;
-    margin: 0 auto 12px auto;
-    height: auto;
-    max-width: 100%;
-  }
-
-  .header a {
-    margin: 4px 6px;
-    padding: 8px 8px;
-  }
-
-  /* Make fixed-height images behave better on small screens */
   .dogs,
   .aphasiaReconnect,
-  .humphreyHeadshot {
+  .humphreyHeadshot,
+  .ryoanjiTemple {
     height: auto;
-    max-width: 100%;
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
