@@ -143,7 +143,7 @@ hr {
 }
 
 .dogs {
-  height: 180px;
+  height: 400px;
 }
 
 .humphreyHeadshot {
@@ -202,4 +202,19 @@ hr {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+.contact address {
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.contact-details h4 {
+  margin-bottom: 2px;
+}
+
+.muted {
+  color: #666;
+  font-size: 0.9rem;
+  margin-left: 6px;
 }
