@@ -158,6 +158,39 @@ hr {
   height: 50px;
 }
 
+/* Keep content nicely constrained */
+.video-block {
+  max-width: 800px;
+  margin: auto auto;
+  text-align: center;
+}
+
+/* Centre headings */
+.video-block h4 {
+  margin-bottom: 8px;
+}
+
+/* Centre description text */
+.video-block p {
+  margin: 0 auto 14px auto;
+  max-width: 650px;
+}
+
+/* Centre the video container */
+.video-embed {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* Make video responsive */
+.video-embed iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 8px;
+}
+
 /* --- Mobile tweaks --- */
 @media (max-width: 600px) {
   .dogs,
