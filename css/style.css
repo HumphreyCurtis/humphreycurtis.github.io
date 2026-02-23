@@ -14,6 +14,7 @@ body {
   padding: 24px 16px;
   line-height: 1.6;
   font-family: Georgia, "Times New Roman", Times, serif;
+  min-height: 100vh;
 }
 
 h1 {
@@ -75,15 +76,17 @@ a:hover {
 
 /* --- Header / nav --- */
 .header {
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
   margin: 8px 0 12px 0;
 }
 
 .header a {
-  display: inline-block;
-  margin: 0 6px;
   padding: 4px 3px; /* smaller */
   font-size: 0.85rem; /* slightly smaller text */
+  white-space: nowrap;
 }
 
 .header a:hover {
@@ -151,7 +154,7 @@ hr {
 }
 
 .ryoanjiTemple {
-  height: 550px;
+  height: 500px;
 }
 
 .linkedinLogo {
