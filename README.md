@@ -8,7 +8,7 @@ The site highlights:
 - Product deployments
 - Technical writing and talks
 
-## 🚀 Deployment
+## Deployment
 
 Deployed automatically via GitHub Pages from the `main` branch.
 
