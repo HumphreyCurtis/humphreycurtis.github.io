@@ -168,6 +168,19 @@ hr {
   text-align: center;
 }
 
+.video-block + .video-block {
+  border-top: 1px solid #bbb;
+  margin-top: 36px;
+  padding-top: 28px;
+}
+
+.section-label {
+  margin: 28px 0 16px 0;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #ddd;
+  font-weight: 600;
+}
+
 /* Centre headings */
 .video-block h4 {
   margin-bottom: 8px;
@@ -177,6 +190,13 @@ hr {
 .video-block p {
   margin: 0 auto 14px auto;
   max-width: 650px;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
 }
 
 /* Centre the video container */
