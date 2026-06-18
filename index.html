@@ -1,42 +1,89 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Humphrey Curtis</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>body { max-width: 900px; }</style>
   </head>
-
   <body>
     <h1>Humphrey Curtis</h1>
 
-    <nav class="header" aria-label="Primary">
-      <a href="./index.html" class="current">Home</a>
-      <a href="html/about.html">About</a>
-      <a href="html/news.html">News</a>
-      <a href="html/videos.html">Videos</a>
-      <a
-        href="https://scholar.google.com/citations?user=t4HUO4MAAAAJ&hl=en"
-        target="_blank"
-        rel="noopener"
-        >Scholar
-      </a>
-      <a href="html/contact.html">Contact</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="./index.html" class="current">Home</a><span class="sep"> // </span><a href="./html/research.html">Research</a><span class="sep"> // </span><a href="./html/news.html">News</a><span class="sep"> // </span><a href="./html/portfolio.html">Portfolio</a><span class="sep"> // </span><a href="./html/blog.html">Blog</a>
     </nav>
-    <main class="main">
-      <div class="image-block">
+
+    <main>
+      <figure>
         <img
-          src="images/Ryoanji_Temple.jpeg"
-          class="ryoanjiTemple"
-          alt="Ryoanji Temple in Kyoto"
-          loading="lazy"
+          src="images/humphrey.jpeg"
+          alt="Portrait of Humphrey Curtis"
+          loading="eager"
         />
-        <p class="image-caption">
-          Ryoanji Temple rock garden pictured in May 2025<br />
+      </figure>
+
+      <p>
+          I am a Research Associate at <a href="https://www.kcl.ac.uk/" target="_blank" rel="noopener">King's College London</a>, having completed my PhD within the <a href="https://www.kcl.ac.uk/research/hcc" target="_blank" rel="noopener">Human-Centred Computing Research Group</a> under the supervision of <a href="https://tdjneate.github.io/" target="_blank" rel="noopener">Dr Timothy Neate</a> and <a href="https://www.kcl.ac.uk/people/rita-borgo" target="_blank" rel="noopener">Dr Rita Borgo</a>. My doctoral research examined wearable and discreet <a href="https://en.wikipedia.org/wiki/Augmentative_and_alternative_communication" target="_blank" rel="noopener">augmentative and alternative communication (AAC)</a> technologies for people with aphasia following stroke. Through participatory design across disadvantaged London communities, I explored how smartwatches and smartbadges can act as wearable communication safety nets during moments of stress and breakdown, while identifying limitations of smartglasses arising from cognitive load. I am currently open-sourcing this portfolio of wearable AAC tools.
         </p>
+
+        <p>
+          More recently, my work has engaged with the growing role of generative AI in accessibility. During an internship with the <a href="https://www.microsoft.com/en-us/research/group/ability/" target="_blank" rel="noopener">Ability Team at Microsoft Research</a>, working under <a href="https://www.microsoft.com/en-us/research/people/mamott/" target="_blank" rel="noopener">Martez Mott</a> and colleagues, I contributed to the design of remote meeting agents for Microsoft Teams to support chronically ill people in maintaining employment and social connection. I am now developing <a href="https://www.advokit.uk/" target="_blank" rel="noopener">Advokit</a>, an inclusive GenAI-enhanced toolkit co-designed with people with aphasia to support access to public services, including benefit navigation, community stories, and language assistance tools.
+        </p>
+
+        <p>
+          Outside of my research, I enjoy sports, reading, travel, film, and food. I am a long-suffering Manchester United fan and an avid golfer. My family has three dogs, which means plenty of walking. If I'm not at a computer you'll most likely find me enjoying a cup of coffee or a good pint of bitter.
+        </p>
+
+      <h2>Curriculum vitae</h2>
+
+      <ul class="links-plain">
+        <li><a href="resources/Humphrey_Curtis_CV_Long.pdf" target="_blank" rel="noopener">Full CV</a></li>
+        <li><a href="resources/Humphrey_Curtis_CV_Short.pdf" target="_blank" rel="noopener">1-Page CV</a></li>
+      </ul>
+
+      <h2>Contact</h2>
+
+      <address class="contact-block">
+        <h3>Email</h3>
+        <p>
+          humphrey [dot] curtis {at} kcl.ac.uk <em>(University)</em><br />
+          humphreywcurtis {at} gmail [dot] com <em>(Personal)</em>
+        </p>
+        <h3>Address</h3>
+        <p>
+          Department of Informatics<br />
+          King's College London<br />
+          <a href="https://www.kcl.ac.uk/visit/bush-house" target="_blank" rel="noopener">Bush House</a>,
+          <a href="https://www.kcl.ac.uk/visit/strand-campus" target="_blank" rel="noopener">Strand Campus</a><br />
+          30 Aldwych, London WC2B 4BG
+        </p>
+      </address>
+
+      <h2>Support</h2>
+
+      <div class="aphasia-support">
+        <p style="margin:0">
+          I volunteer weekly at <a href="https://aphasiareconnect.org/" target="_blank" rel="noopener">Aphasia Re-Connect</a>, a charity supporting people with aphasia in London.
+        </p>
+        <a href="https://aphasiareconnect.org/" target="_blank" rel="noopener">
+          <img
+            src="images/AphasiaReconnect.png"
+            alt="Aphasia Re-Connect logo"
+            class="aphasia-logo"
+          />
+        </a>
       </div>
-      <p>Last updated: April 2026</p>
     </main>
+
+    <footer>
+      <a href="https://scholar.google.com/citations?user=t4HUO4MAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://www.linkedin.com/in/humphreycurtis1/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/HumphreyCurtis" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://twitter.com/HumphreyCurtis4" target="_blank" rel="noopener">Twitter</a>
+      <a href="https://www.goodreads.com/user/show/156002766" target="_blank" rel="noopener">Goodreads</a>
+      <a href="https://letterboxd.com/Humph123/" target="_blank" rel="noopener">Letterboxd</a>
+    </footer>
   </body>
 </html>

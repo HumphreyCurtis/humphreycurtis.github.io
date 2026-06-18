@@ -1,243 +1,417 @@
-/* --- Base layout + typography --- */
 :root {
-  --max-width: 800px;
+  --max-width: 720px;
+  --bg: #faf8f5;
+  --text: #1a1a1a;
+  --muted: #666;
+  --border: #ccc;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.1rem;
+  line-height: 1.75;
   max-width: var(--max-width);
   width: 100%;
   margin: 0 auto;
-  padding: 24px 16px;
-  line-height: 1.6;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  min-height: 100vh;
+  padding: 40px 24px 80px;
 }
 
+/* --- Typography --- */
+
 h1 {
+  font-size: 2.3rem;
+  font-weight: 600;
   text-align: center;
-  margin: 0 0 12px 0;
+  margin: 0 0 6px;
+  letter-spacing: 0.01em;
+}
+
+h2 {
+  font-size: 1.45rem;
+  font-weight: 600;
+  margin: 44px 0 16px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--border);
 }
 
 h3 {
-  margin: 24px 0 8px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 32px 0 10px;
 }
 
-p {
-  margin: 0 0 12px 0;
+p { margin: 0 0 16px; }
+
+ul {
+  margin: 0 0 16px;
+  padding-left: 1.5em;
 }
+
+li { margin-bottom: 4px; }
 
 /* --- Links --- */
-a {
-  color: inherit;
+
+a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+a:visited { color: inherit; }
+a:hover { text-decoration: none; }
+
+/* --- Navigation --- */
+
+.nav {
+  text-align: center;
+  margin: 8px 0 44px;
+  font-size: 1rem;
+  line-height: 2.2;
+}
+
+.nav a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav a:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-a:hover {
-  text-decoration-thickness: 2px;
-}
-
-.current {
-  font-weight: 700;
-}
-
-.media-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 20px 0;
-}
-
-.media-list li {
-  margin: 6px 0;
-}
-
-.media-list i {
-  margin-right: 6px;
-  color: #555;
-}
-
-.support-section {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.aphasia-logo {
-  max-width: 180px; /* controls size */
-  height: auto;
-  margin-top: 10px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* --- Header / nav --- */
-.header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 8px 0 12px 0;
-}
-
-.header a {
-  padding: 4px 3px; /* smaller */
-  font-size: 0.85rem; /* slightly smaller text */
-  white-space: nowrap;
-}
-
-.header a:hover {
-  text-decoration: underline;
-}
-
-/* --- Divider --- */
-hr {
-  margin: 16px 0;
-}
-
-/* News blocks */
-.year-block {
-  margin-bottom: 22px;
-}
-
-.year-block h4 {
-  margin: 18px 0 8px 0;
-  padding-bottom: 3px;
-  border-bottom: 1px solid #ddd;
+.nav a.current {
   font-weight: 600;
 }
 
-.update {
-  margin: 6px 0;
-  line-height: 1.55;
+.sep {
+  color: var(--muted);
+  user-select: none;
 }
 
 /* --- Images --- */
-.headshot {
-  float: left;
-  height: 260px;
-  margin: 0 12px 12px 0;
-  border-radius: 12px;
+
+figure {
+  margin: 32px 0;
 }
 
-.image-block {
-  text-align: center;
-}
-
-.image-caption {
-  margin-top: 8px;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-.dogs,
-.aphasiaReconnect,
-.humphreyHeadshot,
-.linkedinLogo,
-.ryoanjiTemple {
+figure img {
+  width: 100%;
+  height: auto;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 12px;
-  margin-bottom: 16px;
 }
 
-.dogs {
-  height: 400px;
+figcaption {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-top: 8px;
 }
 
-.humphreyHeadshot {
-  height: 400px;
+/* Floated headshot for About page */
+.headshot-img {
+  width: 175px;
+  height: 215px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  float: left;
+  margin: 4px 28px 16px 0;
 }
 
-.ryoanjiTemple {
-  height: 500px;
+.about-intro::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.linkedinLogo {
-  height: 50px;
+/* --- Research / Publication entries --- */
+
+.pub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 8px;
 }
 
-/* Keep content nicely constrained */
-.video-block {
-  max-width: 800px;
-  margin: auto auto;
-  text-align: center;
+.pub-entry {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
-.video-block + .video-block {
-  border-top: 1px solid #bbb;
-  margin-top: 36px;
-  padding-top: 28px;
+.pub-media {
+  flex: 0 0 320px;
 }
 
-.section-label {
-  margin: 28px 0 16px 0;
-  padding-bottom: 4px;
-  border-bottom: 1px solid #ddd;
+.pub-media iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  display: block;
+}
+
+.pub-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.pub-entry.no-media {
+  display: block;
+}
+
+.pub-title {
   font-weight: 600;
+  display: block;
+  margin-bottom: 3px;
+  color: var(--text);
+  font-size: 1.05rem;
 }
 
-/* Centre headings */
-.video-block h4 {
+.pub-meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+.pub-meta strong {
+  color: var(--text);
+  font-style: normal;
+}
+
+.pub-desc {
+  font-size: 0.95rem;
   margin-bottom: 8px;
 }
 
-/* Centre description text */
-.video-block p {
-  margin: 0 auto 14px auto;
-  max-width: 650px;
+.pub-links a {
+  margin-right: 16px;
+  font-size: 0.9rem;
 }
 
-.links {
+.award {
+  display: block;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.9rem;
+  margin: 3px 0 6px;
+}
+
+.award-icon {
+  font-style: normal;
+  display: inline-block;
+}
+
+.year-group {
+  margin-bottom: 8px;
+}
+
+.year-group-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+  margin: 0 0 20px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+/* Suppress double-line directly after the Publications h2 */
+h2 + .year-group-heading {
+  border-top: none;
+  padding-top: 4px;
+}
+
+/* --- News --- */
+
+.year-section {
+  margin-bottom: 32px;
+}
+
+.year-heading {
+  font-size: 1.15rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 5px;
+  margin: 0 0 14px;
+}
+
+.news-item {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.25rem;
+  gap: 16px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
-/* Centre the video container */
+.news-bullet {
+  color: var(--muted);
+  flex-shrink: 0;
+  min-width: 80px;
+  font-size: 0.9rem;
+  padding-top: 1px;
+}
+
+.news-text { flex: 1; }
+
+.reviewer-section {
+  margin-top: 44px;
+  padding-top: 4px;
+}
+
+.reviewer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+/* --- Videos --- */
+
+.video-section {
+  margin-bottom: 44px;
+  padding-bottom: 44px;
+  border-bottom: 1px solid var(--border);
+}
+
+.video-section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.video-section h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.paper-link {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
 .video-embed {
-  width: 100%;
-  max-width: 760px;
-  margin: 0 auto;
+  margin-top: 14px;
 }
 
-/* Make video responsive */
 .video-embed iframe {
   width: 100%;
   aspect-ratio: 16 / 9;
   border: 0;
-  border-radius: 8px;
 }
 
-/* --- Mobile tweaks --- */
-@media (max-width: 600px) {
-  .dogs,
-  .aphasiaReconnect,
-  .humphreyHeadshot,
-  .ryoanjiTemple {
-    height: auto;
-    max-width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+/* --- About / Links --- */
+
+.links-plain {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  line-height: 2;
+  font-size: 1rem;
 }
 
-.contact address {
+.aphasia-support {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 16px;
+}
+
+.aphasia-logo {
+  max-width: 120px;
+  height: auto;
+  display: block;
+  opacity: 0.9;
+  flex-shrink: 0;
+}
+
+/* --- Contact --- */
+
+.contact-block {
   font-style: normal;
-  line-height: 1.6;
+  line-height: 1.9;
 }
 
-.contact-details h4 {
-  margin-bottom: 2px;
+.contact-block h3 { margin-top: 28px; }
+
+/* --- Blog stub --- */
+
+.coming-soon {
+  margin: 60px 0;
+  text-align: center;
+  color: var(--muted);
+  font-style: italic;
+  font-size: 1.15rem;
 }
 
-.muted {
-  color: #666;
+/* --- Footer --- */
+
+footer {
+  margin-top: 60px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
   font-size: 0.9rem;
-  margin-left: 6px;
+  color: var(--muted);
+  text-align: center;
+  line-height: 2;
+}
+
+footer a {
+  color: var(--muted);
+  margin: 0 6px;
+  text-decoration: none;
+}
+
+footer a:visited { color: var(--muted); }
+
+footer a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: var(--text);
+}
+
+/* --- Mobile --- */
+
+@media (max-width: 700px) {
+  body {
+    font-size: 1.1rem;
+    padding: 24px 18px 60px;
+  }
+
+  h1 { font-size: 1.9rem; }
+
+  h2 { margin-top: 32px; }
+
+  .headshot-img {
+    float: none;
+    width: 140px;
+    height: 170px;
+    margin: 0 auto 20px;
+    display: block;
+  }
+
+  .pub-entry {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .pub-media {
+    flex: none;
+    width: 100%;
+  }
+
+  .news-item {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .news-bullet { display: none; }
+
+  .aphasia-support {
+    flex-direction: column;
+    gap: 12px;
+  }
 }
