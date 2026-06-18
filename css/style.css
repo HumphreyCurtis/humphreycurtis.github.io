@@ -195,6 +195,25 @@ figcaption {
   font-size: 0.9rem;
 }
 
+.pub-links-research {
+  margin-top: 6px;
+}
+
+.pub-links-label {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-right: 6px;
+}
+
+.mid-dot {
+  display: inline-block;
+  vertical-align: middle;
+  color: var(--muted);
+  user-select: none;
+  margin: 0 2px;
+  line-height: 1;
+}
+
 .award {
   display: block;
   font-style: italic;
@@ -311,6 +330,18 @@ h2 + .year-group-heading {
 }
 
 /* --- About / Links --- */
+
+.portfolio-logo-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-logo {
+  width: 140px;
+  height: auto;
+  display: block;
+}
 
 .links-plain {
   list-style: none;
