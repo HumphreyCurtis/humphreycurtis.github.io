@@ -136,7 +136,17 @@ figcaption {
   display: flex;
   gap: 28px;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 8px;
+  padding: 16px;
+  margin-left: -16px;
+  margin-right: -16px;
+  border-radius: 8px;
+  transition: background 0.18s ease;
+}
+
+.pub-entry:hover {
+  background: #f0ece7;
+  cursor: default;
 }
 
 .pub-media {
@@ -163,6 +173,39 @@ figcaption {
 
 .pub-entry.no-media {
   display: block;
+}
+
+/* --- Publication type badges --- */
+
+.pub-type {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 3px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  margin-right: 7px;
+  font-family: Georgia, serif;
+}
+
+.pub-type-J  { background: #ddf0e4; color: #1a6e40; }
+.pub-type-C  { background: #dce8f4; color: #1c5590; }
+.pub-type-P  { background: #ece8f4; color: #5c3a96; }
+.pub-type-W  { background: #f4ece8; color: #8c4e1c; }
+.pub-type-BC { background: #f4f0dc; color: #7a6010; }
+.pub-type-D  { background: #f4dce8; color: #8c1c5a; }
+.pub-type-R  { background: #e8f4ec; color: #2a6e50; }
+.pub-type-T  { background: #e8eaf4; color: #3a3a8c; }
+
+/* --- Publication key/legend --- */
+
+.pub-key {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: -8px 0 36px;
+  line-height: 2;
 }
 
 .pub-title {
@@ -415,7 +458,7 @@ footer a:hover {
 
 @media (max-width: 700px) {
   body {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     padding: 24px 18px 60px;
   }
 
@@ -434,6 +477,9 @@ footer a:hover {
   .pub-entry {
     flex-direction: column;
     gap: 14px;
+    margin-left: -12px;
+    margin-right: -12px;
+    padding: 12px;
   }
 
   .pub-media {
