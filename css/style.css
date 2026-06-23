@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Merriweather:ital,wght@0,700;0,900;1,700&display=swap');
+
 :root {
   --max-width: 720px;
   --bg: #faf8f5;
@@ -11,8 +13,9 @@
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Alegreya', Georgia, serif;
   font-size: 1.1rem;
+  font-weight: 400;
   line-height: 1.75;
   max-width: var(--max-width);
   width: 100%;
@@ -22,25 +25,30 @@ body {
 
 /* --- Typography --- */
 
+
+h1, h2, h3, h4 {
+  font-family: 'Merriweather', Georgia, serif;
+}
+
 h1 {
-  font-size: 2.3rem;
-  font-weight: 600;
+  font-size: 2.6rem;
+  font-weight: 700;
   text-align: center;
   margin: 0 0 6px;
   letter-spacing: 0.01em;
 }
 
 h2 {
-  font-size: 1.45rem;
-  font-weight: 600;
+  font-size: 1.25rem;
+  font-weight: 700;
   margin: 44px 0 16px;
   padding-bottom: 5px;
   border-bottom: 1px solid var(--border);
 }
 
 h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.05rem;
+  font-weight: 700;
   margin: 32px 0 10px;
 }
 
@@ -63,7 +71,7 @@ a:hover { text-decoration: none; }
 
 .nav {
   text-align: center;
-  margin: 8px 0 44px;
+  margin: 8px 0 28px;
   font-size: 1rem;
   line-height: 2.2;
 }
@@ -162,7 +170,7 @@ figcaption {
 .pub-entry {
   display: flex;
   gap: 28px;
-  align-items: center;
+  align-items: stretch;
   margin-bottom: 16px;
   padding: 20px;
   border-radius: 8px;
@@ -195,10 +203,26 @@ figcaption {
   display: block;
 }
 
+.pub-media-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 9;
+}
+
+.pub-media-logo img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
 .pub-info {
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
+
 
 .pub-entry.no-media {
   display: block;
@@ -238,11 +262,13 @@ figcaption {
 }
 
 .pub-title {
-  font-weight: 600;
+  font-family: 'Merriweather', Georgia, serif;
+  font-weight: 700;
   display: block;
   margin-bottom: 3px;
   color: var(--text);
-  font-size: 1.05rem;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
 }
 
 .pub-meta {
@@ -266,12 +292,13 @@ figcaption {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 10px;
+  margin-top: auto;
+  padding-top: 10px;
   gap: 8px;
 }
 
 .pub-footer .pub-links {
-  align-self: flex-end;
+  margin-left: auto;
 }
 
 
