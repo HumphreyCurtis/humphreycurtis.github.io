@@ -171,8 +171,8 @@ figcaption {
   display: flex;
   gap: 28px;
   align-items: stretch;
-  margin-bottom: 16px;
-  padding: 20px;
+  margin-bottom: 40px;
+  padding: 28px 20px;
   border-radius: 8px;
   background: #f0ece7;
   border: 1px solid #d9d4ce;
@@ -292,13 +292,14 @@ figcaption {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: auto;
-  padding-top: 10px;
-  gap: 8px;
+  margin-top: 10px;
+  flex: 1;
 }
 
 .pub-footer .pub-links {
+  margin-top: auto;
   margin-left: auto;
+  padding-top: 10px;
 }
 
 
@@ -488,6 +489,151 @@ h2 + .year-group-heading {
 
 
 
+/* --- Portfolio walk-through figures --- */
+
+.portfolio-figure {
+  margin: 40px 0;
+}
+
+.portfolio-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.portfolio-figure figcaption {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 10px;
+  letter-spacing: 0.02em;
+}
+
+/* --- Portfolio index typography --- */
+
+.portfolio-index .pub-media {
+  flex: 0 0 280px;
+}
+
+.portfolio-index .pub-title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.portfolio-index .pub-meta {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-family: 'Alegreya', Georgia, serif;
+  font-style: normal;
+}
+
+.portfolio-index .pub-info {
+  justify-content: flex-start;
+}
+
+.portfolio-cta {
+  margin-top: auto;
+  padding-top: 16px;
+  font-size: 0.82rem;
+  font-family: 'Alegreya', Georgia, serif;
+  font-style: normal;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  transition: color 0.15s ease;
+}
+
+.pub-entry:hover .portfolio-cta {
+  color: var(--text);
+}
+
+/* --- Toolkit download section --- */
+
+.toolkit-section {
+  margin-top: 52px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+
+.toolkit-section h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+
+.toolkit-section > p {
+  margin-bottom: 28px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.toolkit-downloads {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.toolkit-download {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #f9f7f5;
+  text-decoration: none;
+  color: var(--text);
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.toolkit-download:hover {
+  background: #f0ece7;
+  border-color: #c8c2bb;
+}
+
+.toolkit-download-title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex: 1;
+}
+
+.toolkit-download-meta {
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.toolkit-videos {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.toolkit-video-item {
+  font-size: 0.88rem;
+  color: var(--muted);
+  padding: 10px 14px;
+  border-left: 2px solid var(--border);
+  line-height: 1.5;
+}
+
+.toolkit-video-item strong {
+  color: var(--text);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 2px;
+}
+
+/* --- Portfolio detail pages --- */
+
 .portfolio-back {
   display: inline-block;
   font-size: 0.9rem;
@@ -586,7 +732,7 @@ h2 + .year-group-heading {
 }
 
 .aphasia-logo {
-  max-width: 120px;
+  max-width: 80px;
   height: auto;
   display: block;
   opacity: 0.9;
@@ -687,7 +833,6 @@ footer a:hover {
     gap: 2px;
   }
 
-  .news-bullet { display: none; }
 
   .aphasia-support {
     flex-direction: column;
@@ -696,5 +841,13 @@ footer a:hover {
 
   .portfolio-gallery {
     grid-template-columns: 1fr;
+  }
+
+  footer {
+    font-size: 0.75rem;
+  }
+
+  footer a {
+    margin: 0 3px;
   }
 }
