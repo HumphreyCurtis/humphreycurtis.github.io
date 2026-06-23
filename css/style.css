@@ -124,6 +124,33 @@ figcaption {
   clear: both;
 }
 
+/* --- Collapsible abstracts --- */
+
+.pub-abstract summary {
+  font-size: 0.85rem;
+  color: var(--muted);
+  cursor: pointer;
+  list-style: none;
+  display: inline-block;
+  user-select: none;
+  letter-spacing: 0.01em;
+}
+
+.pub-abstract summary::-webkit-details-marker { display: none; }
+
+.pub-abstract summary::before {
+  content: '+ ';
+  font-style: normal;
+}
+
+.pub-abstract[open] summary::before {
+  content: '− ';
+}
+
+.pub-abstract .pub-desc {
+  margin-top: 10px;
+}
+
 /* --- Research / Publication entries --- */
 
 .pub-list {
@@ -136,8 +163,8 @@ figcaption {
   display: flex;
   gap: 28px;
   align-items: center;
-  margin-bottom: 8px;
-  padding: 16px;
+  margin-bottom: 16px;
+  padding: 20px 16px;
   margin-left: -16px;
   margin-right: -16px;
   border-radius: 8px;
@@ -231,6 +258,22 @@ figcaption {
 .pub-desc {
   font-size: 0.95rem;
   margin-bottom: 8px;
+}
+
+.pub-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+.pub-footer .pub-links {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.pub-abstract {
+  margin-top: 0;
 }
 
 .pub-links a {
