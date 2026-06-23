@@ -636,8 +636,9 @@ footer a:hover {
     gap: 14px;
     margin-left: 0;
     margin-right: 0;
-    padding: 16px 0;
-    border-radius: 0;
+    padding: 14px;
+    border-radius: 6px;
+    background: #f0ece7;
   }
 
   .pub-entry:hover {
