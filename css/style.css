@@ -262,18 +262,21 @@ figcaption {
 
 .pub-footer {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: flex-start;
   margin-top: 10px;
+  gap: 8px;
 }
 
 .pub-footer .pub-links {
-  flex-shrink: 0;
-  white-space: nowrap;
+  align-self: flex-end;
 }
+
 
 .pub-abstract {
   margin-top: 0;
+  flex: 1;
+  min-width: 0;
 }
 
 .pub-links a {
@@ -416,6 +419,47 @@ h2 + .year-group-heading {
 }
 
 /* --- Portfolio detail pages --- */
+
+.portfolio-layout {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 52px;
+  margin-top: 32px;
+  align-items: start;
+}
+
+.sidebar-block {
+  margin-bottom: 28px;
+}
+
+.sidebar-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.sidebar-value {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.sidebar-value a {
+  color: var(--text);
+}
+
+@media (max-width: 700px) {
+  .portfolio-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+
 
 .portfolio-back {
   display: inline-block;
@@ -590,9 +634,23 @@ footer a:hover {
   .pub-entry {
     flex-direction: column;
     gap: 14px;
-    margin-left: -12px;
-    margin-right: -12px;
-    padding: 12px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 16px 0;
+    border-radius: 0;
+  }
+
+  .pub-entry:hover {
+    background: none;
+  }
+
+  .pub-footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .pub-footer .pub-links {
+    align-self: flex-end;
   }
 
   .pub-media {
