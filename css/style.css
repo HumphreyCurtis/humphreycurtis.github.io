@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Merriweather:ital,wght@0,700;0,900;1,700&display=swap');
 
 :root {
-  --max-width: 720px;
+  --max-width: 1140px;
   --bg: #faf8f5;
   --text: #1a1a1a;
   --muted: #666;
@@ -533,6 +533,17 @@ h2 + .year-group-heading {
   font-style: normal;
 }
 
+.portfolio-index .pub-date {
+  font-size: 0.88rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text);
+  font-family: 'Alegreya', Georgia, serif;
+  font-style: normal;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
 .portfolio-index .pub-info {
   justify-content: flex-start;
 }
@@ -550,6 +561,44 @@ h2 + .year-group-heading {
 
 .pub-entry:hover .portfolio-cta {
   color: var(--text);
+}
+
+/* --- Live toolkit demo section --- */
+
+.live-toolkit-section {
+  margin-top: 52px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+
+.live-toolkit-section h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+
+.live-toolkit-section > p {
+  margin-bottom: 28px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.live-toolkit-section h4 {
+  margin-top: 52px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.live-toolkit-section h4 + p {
+  margin-top: 0;
+}
+
+.demo-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
 }
 
 /* --- Toolkit download section --- */
