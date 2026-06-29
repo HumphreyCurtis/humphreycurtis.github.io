@@ -963,6 +963,15 @@ footer a:hover {
     grid-template-columns: 1fr;
   }
 
+  .demo-video-wrap {
+    min-height: 260px;
+  }
+
+  .demo-video {
+    min-height: 260px;
+    object-fit: cover;
+  }
+
   footer {
     font-size: 0.75rem;
   }
