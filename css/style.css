@@ -448,6 +448,19 @@ h2 + .year-group-heading {
 
 /* --- Portfolio detail pages --- */
 
+.project-meta {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 6px 24px;
+  border-bottom: 1px solid var(--border);
+  margin: 0 0 40px;
+  padding: 14px 0 18px;
+}
+
+.project-meta-item {
+  display: contents;
+}
+
 .portfolio-layout {
   display: grid;
   grid-template-columns: 1fr 200px;
@@ -485,6 +498,7 @@ h2 + .year-group-heading {
     grid-template-columns: 1fr;
     gap: 28px;
   }
+
 }
 
 
@@ -576,9 +590,9 @@ h2 + .year-group-heading {
   margin-bottom: 6px;
 }
 
-.live-toolkit-section > p {
+.live-toolkit-section > p,
+.toolkit-section > p {
   margin-bottom: 28px;
-  color: var(--muted);
   font-size: 0.95rem;
 }
 
@@ -601,6 +615,19 @@ h2 + .year-group-heading {
   border-radius: 4px;
 }
 
+.figure-constrained,
+.codesign-section .portfolio-figure {
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.toolkit-card-figure {
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* --- Toolkit download section --- */
 
 .toolkit-section {
@@ -616,7 +643,6 @@ h2 + .year-group-heading {
 
 .toolkit-section > p {
   margin-bottom: 28px;
-  color: var(--muted);
   font-size: 0.95rem;
 }
 

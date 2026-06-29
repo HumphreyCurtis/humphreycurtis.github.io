@@ -26,26 +26,54 @@
 
       <h2>Advokit</h2>
 
-      <div class="portfolio-layout">
+      <div class="project-meta">
+        <div class="project-meta-item">
+          <span class="sidebar-label">Year</span>
+          <span class="sidebar-value">2025–present</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="sidebar-label">Role</span>
+          <span class="sidebar-value">Research Associate · Lead Engineer · Lead Designer</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="sidebar-label">Partners</span>
+          <span class="sidebar-value">King's College London · Aphasia Re-Connect · Stroke Association · Dept. for Work &amp; Pensions</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="sidebar-label">Methods</span>
+          <span class="sidebar-value">Co-design · Interviews · Journey mapping · Speculative design fiction · Thematic analysis · Interaction analysis</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="sidebar-label">Platform</span>
+          <span class="sidebar-value">Web · Generative AI</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="sidebar-label">Link</span>
+          <span class="sidebar-value"><a href="https://www.advokit.uk/" target="_blank" rel="noopener">advokit.uk →</a></span>
+        </div>
+        <div class="project-meta-item">
+          <span class="sidebar-label">Research</span>
+          <span class="sidebar-value"><a href="../research.html">"Computer Says No" — CHI 2026</a> · <a href="../research.html">Prompting Change — ASSETS 2026</a></span>
+        </div>
+      </div>
 
-        <div class="portfolio-main-col">
-          <p>People with aphasia are routinely excluded from the digital welfare systems they depend on. Benefits portals, housing applications, healthcare booking systems, GP apps — these services assume a level of literacy, digital fluency and communicative competence that many stroke survivors simply do not have. The consequences are severe: lost entitlements, failed appeals, financial hardship, and the emotional cost of navigating hostile bureaucracy without adequate support.</p>
+      <p>People with aphasia are routinely excluded from the digital welfare systems they depend on. Benefits portals, housing applications, healthcare booking systems, GP apps — these services assume a level of literacy, digital fluency and communicative competence that many stroke survivors simply do not have. The consequences are severe: lost entitlements, failed appeals, financial hardship, and the emotional cost of navigating hostile bureaucracy without adequate support.</p>
 
-          <figure class="portfolio-figure">
-            <img src="../../images/advokit/Private-Health-Providers.jpg" alt="Screenshots of five inaccessible welfare and healthcare apps including Southern Housing, Swiftqueue and Accurx" loading="lazy" />
-            <figcaption>Private welfare and health providers — inaccessible by design to people with communication disabilities</figcaption>
-          </figure>
+      <figure class="portfolio-figure figure-constrained">
+        <img src="../../images/advokit/Private-Health-Providers.jpg" alt="Screenshots of five inaccessible welfare and healthcare apps including Southern Housing, Swiftqueue and Accurx" loading="lazy" />
+        <figcaption>Private welfare and health providers — inaccessible by design to people with communication disabilities</figcaption>
+      </figure>
 
-          <p>This is not an abstract problem. One co-designer — P4, living with aphasia — attempted to migrate his Universal Credit claim by phone. The call began with automated robocalls that repeatedly misinterpreted his speech, requiring him to verbally spell his name, phone number and answer six security questions. He was placed on extended hold and instructed to "go online" despite his aphasia. When his call dropped unexpectedly at 6pm, he was told to restart the entire process the next day. He ultimately had to attend the Job Centre in person — undermining the very premise of digital access.</p>
+      <p>This is not an abstract problem. One co-designer — P4, living with aphasia — attempted to migrate his Universal Credit claim by phone. The call began with automated robocalls that repeatedly misinterpreted his speech, requiring him to verbally spell his name, phone number and answer six security questions. He was placed on extended hold and instructed to "go online" despite his aphasia. When his call dropped unexpectedly at 6pm, he was told to restart the entire process the next day. He ultimately had to attend the Job Centre in person — undermining the very premise of digital access.</p>
 
-          <figure class="portfolio-figure">
-            <img src="../../images/advokit/Phone-Call-Timeline.png" alt="Detailed journey map of P4's phone call to DWP, showing each barrier encountered from poor mobile coverage to dropped call to in-person attendance required" loading="lazy" />
-            <figcaption>P4's Universal Credit phone call — a journey map of compounding failures for someone with aphasia</figcaption>
-          </figure>
+      <figure class="portfolio-figure figure-constrained">
+        <img src="../../images/advokit/Phone-Call-Timeline.png" alt="Detailed journey map of P4's phone call to DWP, showing each barrier encountered from poor mobile coverage to dropped call to in-person attendance required" loading="lazy" />
+        <figcaption>P4's Universal Credit phone call — a journey map of compounding failures for someone with aphasia</figcaption>
+      </figure>
 
-          <p>Advokit is a response to this — a generative AI-enhanced digital toolkit co-designed with stroke survivors with aphasia, speech and language therapists and welfare advisors at Aphasia Re-Connect. The design process is documented in two peer-reviewed papers presented at CHI 2026 and submitted to ASSETS 2026.</p>
+      <p>Advokit is a response to this — a generative AI-enhanced digital toolkit co-designed with stroke survivors with aphasia, speech and language therapists and welfare advisors at Aphasia Re-Connect. The design process is documented in two peer-reviewed papers presented at CHI 2026 and submitted to ASSETS 2026.</p>
 
-          <div class="live-toolkit-section">
+      <div class="live-toolkit-section">
             <h3>Community Web Toolkit</h3>
             <p>Advokit is live at <a href="https://www.advokit.uk/" target="_blank" rel="noopener">advokit.uk</a>. I designed and built the toolkit end-to-end — full-stack architecture, accessibility infrastructure, the LLM-powered Benefit Buddy assistant and the community stories pipeline. Every feature was directly shaped by co-design findings: the traffic-light difficulty ratings, the progressive disclosure of application tips, the read-aloud function with word-level highlighting, and the structured feedback controls in Benefit Buddy all trace back to specific barriers named by co-designers across the four stages. The five sections below document each component of the toolkit.</p>
 
@@ -93,7 +121,7 @@
             </figure>
           </div>
 
-          <div class="toolkit-section">
+          <div class="toolkit-section codesign-section">
             <h3>Co-Design Process</h3>
             <p>The toolkit was developed across four stages from late May to late July 2025, involving 8 workshops, 7 interviews and over 60 participants across SLT centres, community venues and online.</p>
 
@@ -138,7 +166,7 @@
             <h3>Open-Source Workshop Toolkit</h3>
             <p>A core contribution of Advokit is a fully open-source co-design toolkit that enables others to run their own workshops with disabled communities on digital welfare access. It includes accessible card decks, printable facilitation materials and five speculative design fiction video prompts. Download and use freely.</p>
 
-            <figure class="portfolio-figure" style="margin-top: 0; margin-bottom: 28px;">
+            <figure class="portfolio-figure toolkit-card-figure" style="margin-top: 0; margin-bottom: 28px;">
               <img src="../../images/advokit/Toolkit-Card-Preview.png" alt="Four Advokit card types shown in a 2x2 grid: yellow BARRIER card 'It's physically difficult', cyan WHERE card 'Basic phone or landline phone', purple HELP card 'Blue Badge scheme', and pale yellow FEELINGS card '++ very positive'" loading="lazy" />
               <figcaption>The four Advokit card types: BARRIER (yellow), WHERE (cyan), HELP (purple) and FEELINGS (pale yellow)</figcaption>
             </figure>
@@ -183,43 +211,6 @@
 
           </div>
 
-        </div>
-
-        <aside class="portfolio-sidebar">
-          <div class="sidebar-block">
-            <span class="sidebar-label">Year</span>
-            <span class="sidebar-value">2025–present</span>
-          </div>
-          <div class="sidebar-block">
-            <span class="sidebar-label">Role</span>
-            <span class="sidebar-value">Research Associate<br>Lead Engineer<br>Lead Designer</span>
-          </div>
-          <div class="sidebar-block">
-            <span class="sidebar-label">Partners</span>
-            <span class="sidebar-value">King's College London<br>Aphasia Re-Connect<br>Stroke Association<br>Dept. for Work &amp; Pensions</span>
-          </div>
-          <div class="sidebar-block">
-            <span class="sidebar-label">Methods</span>
-            <span class="sidebar-value">Co-design workshops<br>Interviews<br>Journey mapping<br>Speculative design fiction<br>Thematic analysis<br>Interaction analysis</span>
-          </div>
-          <div class="sidebar-block">
-            <span class="sidebar-label">Platform</span>
-            <span class="sidebar-value">Web · Generative AI</span>
-          </div>
-          <div class="sidebar-block">
-            <span class="sidebar-label">Link</span>
-            <span class="sidebar-value"><a href="https://www.advokit.uk/" target="_blank" rel="noopener">advokit.uk →</a></span>
-          </div>
-          <div class="sidebar-block">
-            <span class="sidebar-label">Research</span>
-            <span class="sidebar-value">
-              <a href="../research.html">"Computer Says No" — CHI 2026</a><br>
-              <a href="../research.html">Prompting Change — ASSETS 2026</a>
-            </span>
-          </div>
-        </aside>
-
-      </div>
     </main>
 
     <footer>
