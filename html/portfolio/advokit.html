@@ -57,73 +57,73 @@
         </div>
       </div>
 
-      <p>People with aphasia are routinely excluded from the digital welfare systems they depend on. Benefits portals, housing applications, healthcare booking systems, GP apps — these services assume a level of literacy, digital fluency and communicative competence that many stroke survivors simply do not have. The consequences are severe: lost entitlements, failed appeals, financial hardship, and the emotional cost of navigating hostile bureaucracy without adequate support.</p>
+      <p>People with aphasia are routinely excluded from the digital welfare systems they depend on. Benefits portals, housing applications, GP apps — these services assume literacy, digital fluency and communicative competence that many stroke survivors simply do not have. The consequences are severe: lost entitlements, failed appeals, financial hardship.</p>
 
       <figure class="portfolio-figure figure-constrained">
         <img src="../../images/advokit/Private-Health-Providers.jpg" alt="Screenshots of five inaccessible welfare and healthcare apps including Southern Housing, Swiftqueue and Accurx" loading="lazy" />
         <figcaption>Private welfare and health providers — inaccessible by design to people with communication disabilities</figcaption>
       </figure>
 
-      <p>This is not an abstract problem. One co-designer — P4, living with aphasia — attempted to migrate his Universal Credit claim by phone. The call began with automated robocalls that repeatedly misinterpreted his speech, requiring him to verbally spell his name, phone number and answer six security questions. He was placed on extended hold and instructed to "go online" despite his aphasia. When his call dropped unexpectedly at 6pm, he was told to restart the entire process the next day. He ultimately had to attend the Job Centre in person — undermining the very premise of digital access.</p>
+      <p>P4, a co-designer living with aphasia, called the DWP to migrate his Universal Credit claim. <strong>Automated robocalls</strong> repeatedly misinterpreted his speech. After extended hold, a dropped call and being told to restart the next day, he attended the Job Centre in person — undermining the premise of digital access entirely.</p>
 
       <figure class="portfolio-figure figure-constrained">
         <img src="../../images/advokit/Phone-Call-Timeline.png" alt="Detailed journey map of P4's phone call to DWP, showing each barrier encountered from poor mobile coverage to dropped call to in-person attendance required" loading="lazy" />
         <figcaption>P4's Universal Credit phone call — a journey map of compounding failures for someone with aphasia</figcaption>
       </figure>
 
-      <p>Advokit is a response to this — a generative AI-enhanced digital toolkit co-designed with stroke survivors with aphasia, speech and language therapists and welfare advisors at Aphasia Re-Connect. The design process is documented in two peer-reviewed papers presented at CHI 2026 and submitted to ASSETS 2026.</p>
+      <p>Advokit is a response to this — a <strong>generative AI-enhanced digital toolkit</strong> co-designed with stroke survivors, speech and language therapists and welfare advisors at Aphasia Re-Connect. Documented in peer-reviewed papers at CHI 2026 and ASSETS 2026.</p>
 
       <div class="live-toolkit-section">
             <h3>Community Web Toolkit</h3>
-            <p>Advokit is live at <a href="https://www.advokit.uk/" target="_blank" rel="noopener">advokit.uk</a>. I designed and built the toolkit end-to-end — full-stack architecture, accessibility infrastructure, the LLM-powered Benefit Buddy assistant and the community stories pipeline. Every feature was directly shaped by co-design findings: the traffic-light difficulty ratings, the progressive disclosure of application tips, the read-aloud function with word-level highlighting, and the structured feedback controls in Benefit Buddy all trace back to specific barriers named by co-designers across the four stages. The five sections below document each component of the toolkit.</p>
+            <p>Advokit is live at <a href="https://www.advokit.uk/" target="_blank" rel="noopener">advokit.uk</a>. I designed and built the toolkit end-to-end — full-stack architecture, accessibility infrastructure, LLM-powered assistance and a community stories pipeline. Every feature traces back to barriers named by co-designers: traffic-light difficulty ratings, progressive disclosure of tips, read-aloud with word highlighting and structured feedback controls in Benefit Buddy.</p>
 
             <h4>Toolkit Overview</h4>
-            <p>Advokit comprises five core sections: a homepage, an about page, a benefits list, a comparative benefits table and a stories page. The homepage introduces the project through a short overview video, followed by four illustrated tiles supporting common user pathways: considering whether to apply for welfare, having already started an application, exploring real welfare stories from people with aphasia and learning more about the project. Short explainer videos are embedded throughout the platform to enhance accessibility and support independent navigation.</p>
+            <p>Five core sections: a homepage, benefits list, comparative table, stories page and Benefit Buddy. The homepage opens with an overview video followed by four illustrated tiles for common pathways: considering whether to apply, continuing an application, exploring community stories and learning about the project.</p>
             <figure class="portfolio-figure">
-              <div class="demo-video-wrap"><video muted playsinline class="demo-video">
+              <div class="demo-video-wrap"><video muted playsinline class="demo-video" poster="../../images/advokit/demo/Homepage-poster.jpg">
                 <source src="../../images/advokit/demo/Homepage.mp4" type="video/mp4" />
-              </video><button class="demo-replay" aria-label="Replay video">▶ Play</button></div>
+              </video><button class="demo-replay" aria-label="Play video">▶ Play</button></div>
               <figcaption>Homepage — four illustrated pathway tiles with embedded explainer video</figcaption>
             </figure>
 
             <h4>Benefits List and Table</h4>
-            <p>The benefits list page presents the 21 welfare benefits currently supported by Advokit, complemented by a sortable comparative table for side-by-side comparison and prioritisation. The decision to present benefits as a navigable list and comparative table — rather than a linear document or static guide — arose directly from co-design sessions in which participants described feeling overwhelmed by the volume and complexity of available benefits and uncertain about where to begin. Perceived application difficulty and value emerged as the most salient factors shaping decisions about which benefits to pursue. Difficulty is communicated using a traffic-light metaphor — easy (green), medium (amber) and hard (red) — while value is represented through a five-star rating, supporting rapid, low-demand comparison for people with aphasia.</p>
+            <p>21 welfare benefits as a navigable list and <strong>sortable comparative table</strong> — chosen over a linear document after co-designers described feeling overwhelmed. Difficulty uses a traffic-light metaphor (easy · medium · hard); perceived value a five-star rating, enabling rapid low-demand comparison.</p>
             <figure class="portfolio-figure">
-              <div class="demo-video-wrap"><video muted playsinline class="demo-video">
+              <div class="demo-video-wrap"><video muted playsinline class="demo-video" poster="../../images/advokit/demo/Benefit-Table-poster.jpg">
                 <source src="../../images/advokit/demo/Benefit-Table.mp4" type="video/mp4" />
-              </video><button class="demo-replay" aria-label="Replay video">▶ Play</button></div>
+              </video><button class="demo-replay" aria-label="Play video">▶ Play</button></div>
               <figcaption>Comparative benefits table — sortable by difficulty and perceived value</figcaption>
             </figure>
 
             <h4>Benefit Pages</h4>
-            <p>Individual benefit pages were designed to minimise textual density, reflecting the reading support needs common among people with aphasia. Key information is presented succinctly, with additional detail available through interactive drop-down sections and related links. All textual content includes a read-aloud function with word-level highlighting. Each page includes community-generated application tips — contributed by welfare veterans, caregivers and co-designers — presented using a progressive disclosure design that allows users to reveal them incrementally or view them all at once. All tip lists and resource collections are printable to support offline access.</p>
+            <p>Benefit pages minimise textual density, with key information upfront and additional detail in interactive drop-downs. All text includes <strong>read-aloud with highlighting</strong>. Community-generated tips use progressive disclosure — revealing incrementally or all at once — and are printable for offline access.</p>
             <figure class="portfolio-figure">
-              <div class="demo-video-wrap"><video muted playsinline class="demo-video">
+              <div class="demo-video-wrap"><video muted playsinline class="demo-video" poster="../../images/advokit/demo/Benefit-Tips-poster.jpg">
                 <source src="../../images/advokit/demo/Benefit-Tips.mp4" type="video/mp4" />
-              </video><button class="demo-replay" aria-label="Replay video">▶ Play</button></div>
+              </video><button class="demo-replay" aria-label="Play video">▶ Play</button></div>
               <figcaption>Benefit page — progressive disclosure tips with read-aloud and print support</figcaption>
             </figure>
 
             <h4>Benefit Stories</h4>
-            <p>The stories page hosts YouTube-embedded interviews with community welfare veterans from Stage 2, accompanied by commissioned illustrations, captions and printable accessible transcripts. This section foregrounds lived experience as a shared community resource, enabling visitors to engage with welfare journeys through multimodal narratives. Each story highlights the individual's experiences with specific benefits, a brief synopsis, their top application tips and personal reflections. By combining video, illustration and text, this section supports varied literacy levels and interaction preferences.</p>
+            <p>YouTube-embedded interviews with community welfare veterans, paired with commissioned illustrations, captions and printable transcripts. Each story includes a synopsis, top application tips and personal reflections — combining video, illustration and text to support <strong>varied literacy levels</strong>.</p>
             <figure class="portfolio-figure">
               <img src="../../images/advokit/demo/Stories.png" alt="Benefit Stories page featuring commissioned illustrations, accessible synopsis text and read-aloud controls with word highlighting" loading="lazy" />
               <figcaption>Stories page — commissioned progressive illustrations, read-aloud with word highlighting and printable accessible transcripts</figcaption>
             </figure>
 
             <h4>Benefit Buddy</h4>
-            <p>Benefit Buddy is an LLM-powered conversational assistant designed to support benefit applications for people with aphasia. Unlike general-purpose chatbots, it is specifically configured to scaffold welfare application writing: supporting collaborative text ideation, breaking complex questions into smaller steps and coaching applicants to articulate the functional impacts of their condition in the language assessors require. At the onset of each interaction, Benefit Buddy presents structured onboarding questions to establish context — the benefit being applied for, the current claim stage and relevant health conditions. All chat messages can be read aloud using integrated text-to-speech and copied directly into application forms. Structured feedback buttons — Good response, Bad response, More detail and Less detail — allow iterative refinement without additional typing.</p>
+            <p>An <strong>LLM-powered assistant</strong> configured specifically for welfare application writing — breaking questions into steps and coaching applicants to articulate functional impacts in assessor-facing language. Structured onboarding establishes context before the conversation begins. All responses are read-aloud enabled and copy directly into application forms. Feedback buttons — Good response, Bad response, More detail, Less detail — allow refinement without additional typing.</p>
             <figure class="portfolio-figure">
-              <div class="demo-video-wrap"><video muted playsinline class="demo-video">
+              <div class="demo-video-wrap"><video muted playsinline class="demo-video" poster="../../images/advokit/demo/Benefit-Buddy-poster.jpg">
                 <source src="../../images/advokit/demo/Benefit-Buddy.mp4" type="video/mp4" />
-              </video><button class="demo-replay" aria-label="Replay video">▶ Play</button></div>
+              </video><button class="demo-replay" aria-label="Play video">▶ Play</button></div>
               <figcaption>Benefit Buddy — structured onboarding, first-person draft answers and feedback-driven refinement</figcaption>
             </figure>
           </div>
 
           <div class="toolkit-section codesign-section">
             <h3>Co-Design Process</h3>
-            <p>The toolkit was developed across four stages from late May to late July 2025, involving 8 workshops, 7 interviews and over 60 participants across SLT centres, community venues and online.</p>
+            <p><strong>Four stages, May–July 2025</strong>: 8 workshops, 7 interviews, over 60 participants across SLT centres, community venues and online.</p>
 
             <figure class="portfolio-figure">
               <img src="../../images/advokit/Advokit-Study-Timeline.png" alt="Four-stage study timeline from board formation and interviews through three rounds of co-design workshops, showing participant counts and design materials at each stage" loading="lazy" />
@@ -135,21 +135,21 @@
               <figcaption>Co-design workshops across SLT centres and community venues</figcaption>
             </figure>
 
-            <p>Stage 2 workshops used accessible card decks — Help cards explaining benefit types in plain language, Where cards listing access channels, Barrier cards naming common obstacles, and Feelings cards — to help co-designers rank and articulate their experiences of welfare services. The resulting value/difficulty grids surfaced what mattered most: being understood, getting help quickly, not having to repeat yourself.</p>
+            <p><strong>Stage 2</strong> used accessible card decks — Help, Where, Barrier and Feelings cards — to rank welfare service experiences. Value/difficulty grids surfaced what mattered most: being understood, getting help quickly, not repeating yourself.</p>
 
             <figure class="portfolio-figure">
               <img src="../../images/advokit/Co-design-Card-Ranking.jpg" alt="Help card showing PIP (Personal Independence Payment), Feelings card showing 'very negative', workshop photos and a value/difficulty ranking exercise with sticky notes" loading="lazy" />
               <figcaption>Stage 2: accessible card decks and ranking exercises to surface barriers and priorities across welfare services</figcaption>
             </figure>
 
-            <p>Stage 3 used journey mapping toolkits — a squiggly-line format representing the emotional arc of a welfare journey — to trace the specific moments where things went wrong. Co-designers physically placed Where and Barrier cards along the map, annotating with their own words. The resulting maps were dense with compound failures: inaccessible forms, phone queues, confusing letters, staff who didn't know about aphasia.</p>
+            <p><strong>Stage 3</strong> used journey mapping to trace specific moments of failure. Co-designers placed cards along a squiggly-line emotional arc, producing maps dense with compound failures: inaccessible forms, phone queues, confusing letters, staff unfamiliar with aphasia.</p>
 
             <figure class="portfolio-figure">
               <img src="../../images/advokit/Journey-Mapping-Workshop.jpg" alt="Journey mapping toolkit with squiggly line format, Where card showing laptop computer, Barrier card saying 'I have low confidence', workshop photos and a completed journey map covered in sticky notes" loading="lazy" />
               <figcaption>Stage 3: journey mapping welfare experiences — from the first touchpoint to the final outcome</figcaption>
             </figure>
 
-            <p>Stage 4 used speculative design fiction: short video prompts depicting near-future AI welfare scenarios — an automated eligibility denial, an AI meeting bot, a document camera, an inaccessible medical form — to ground discussion in vivid possibility rather than abstract hypotheticals. Co-designers responded with their own visions for what empathetic, accessible AI welfare services could look like.</p>
+            <p><strong>Stage 4</strong> used speculative design fiction — short video prompts depicting near-future AI welfare scenarios — to ground discussion in vivid possibility. Co-designers responded with their own visions for empathetic, accessible AI welfare services.</p>
 
             <figure class="portfolio-figure">
               <img src="../../images/advokit/Speculative-Design-Fiction-Workshop.jpg" alt="Video prompt sequence strip showing five scenario stills, plus in-person workshop photo and online workshop showing AI Meeting Bot on screen" loading="lazy" />
@@ -164,7 +164,7 @@
 
           <div class="toolkit-section">
             <h3>Open-Source Workshop Toolkit</h3>
-            <p>A core contribution of Advokit is a fully open-source co-design toolkit that enables others to run their own workshops with disabled communities on digital welfare access. It includes accessible card decks, printable facilitation materials and five speculative design fiction video prompts. Download and use freely.</p>
+            <p>A fully open-source toolkit enabling others to run co-design workshops on digital welfare access. Includes accessible card decks, printable facilitation materials and five speculative design fiction video prompts. Download and use freely.</p>
 
             <figure class="portfolio-figure toolkit-card-figure" style="margin-top: 0; margin-bottom: 28px;">
               <img src="../../images/advokit/Toolkit-Card-Preview.png" alt="Four Advokit card types shown in a 2x2 grid: yellow BARRIER card 'It's physically difficult', cyan WHERE card 'Basic phone or landline phone', purple HELP card 'Blue Badge scheme', and pale yellow FEELINGS card '++ very positive'" loading="lazy" />
