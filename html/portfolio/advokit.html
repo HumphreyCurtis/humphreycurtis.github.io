@@ -80,27 +80,27 @@
             <h4>Toolkit Overview</h4>
             <p>Advokit comprises five core sections: a homepage, an about page, a benefits list, a comparative benefits table and a stories page. The homepage introduces the project through a short overview video, followed by four illustrated tiles supporting common user pathways: considering whether to apply for welfare, having already started an application, exploring real welfare stories from people with aphasia and learning more about the project. Short explainer videos are embedded throughout the platform to enhance accessibility and support independent navigation.</p>
             <figure class="portfolio-figure">
-              <video autoplay muted loop playsinline class="demo-video">
+              <div class="demo-video-wrap"><video muted playsinline class="demo-video">
                 <source src="../../images/advokit/demo/Homepage.mp4" type="video/mp4" />
-              </video>
+              </video><button class="demo-replay" aria-label="Replay video">▶ Play</button></div>
               <figcaption>Homepage — four illustrated pathway tiles with embedded explainer video</figcaption>
             </figure>
 
             <h4>Benefits List and Table</h4>
             <p>The benefits list page presents the 21 welfare benefits currently supported by Advokit, complemented by a sortable comparative table for side-by-side comparison and prioritisation. The decision to present benefits as a navigable list and comparative table — rather than a linear document or static guide — arose directly from co-design sessions in which participants described feeling overwhelmed by the volume and complexity of available benefits and uncertain about where to begin. Perceived application difficulty and value emerged as the most salient factors shaping decisions about which benefits to pursue. Difficulty is communicated using a traffic-light metaphor — easy (green), medium (amber) and hard (red) — while value is represented through a five-star rating, supporting rapid, low-demand comparison for people with aphasia.</p>
             <figure class="portfolio-figure">
-              <video autoplay muted loop playsinline class="demo-video">
+              <div class="demo-video-wrap"><video muted playsinline class="demo-video">
                 <source src="../../images/advokit/demo/Benefit-Table.mp4" type="video/mp4" />
-              </video>
+              </video><button class="demo-replay" aria-label="Replay video">▶ Play</button></div>
               <figcaption>Comparative benefits table — sortable by difficulty and perceived value</figcaption>
             </figure>
 
             <h4>Benefit Pages</h4>
             <p>Individual benefit pages were designed to minimise textual density, reflecting the reading support needs common among people with aphasia. Key information is presented succinctly, with additional detail available through interactive drop-down sections and related links. All textual content includes a read-aloud function with word-level highlighting. Each page includes community-generated application tips — contributed by welfare veterans, caregivers and co-designers — presented using a progressive disclosure design that allows users to reveal them incrementally or view them all at once. All tip lists and resource collections are printable to support offline access.</p>
             <figure class="portfolio-figure">
-              <video autoplay muted loop playsinline class="demo-video">
+              <div class="demo-video-wrap"><video muted playsinline class="demo-video">
                 <source src="../../images/advokit/demo/Benefit-Tips.mp4" type="video/mp4" />
-              </video>
+              </video><button class="demo-replay" aria-label="Replay video">▶ Play</button></div>
               <figcaption>Benefit page — progressive disclosure tips with read-aloud and print support</figcaption>
             </figure>
 
@@ -114,9 +114,9 @@
             <h4>Benefit Buddy</h4>
             <p>Benefit Buddy is an LLM-powered conversational assistant designed to support benefit applications for people with aphasia. Unlike general-purpose chatbots, it is specifically configured to scaffold welfare application writing: supporting collaborative text ideation, breaking complex questions into smaller steps and coaching applicants to articulate the functional impacts of their condition in the language assessors require. At the onset of each interaction, Benefit Buddy presents structured onboarding questions to establish context — the benefit being applied for, the current claim stage and relevant health conditions. All chat messages can be read aloud using integrated text-to-speech and copied directly into application forms. Structured feedback buttons — Good response, Bad response, More detail and Less detail — allow iterative refinement without additional typing.</p>
             <figure class="portfolio-figure">
-              <video autoplay muted loop playsinline class="demo-video">
+              <div class="demo-video-wrap"><video muted playsinline class="demo-video">
                 <source src="../../images/advokit/demo/Benefit-Buddy.mp4" type="video/mp4" />
-              </video>
+              </video><button class="demo-replay" aria-label="Replay video">▶ Play</button></div>
               <figcaption>Benefit Buddy — structured onboarding, first-person draft answers and feedback-driven refinement</figcaption>
             </figure>
           </div>
@@ -221,5 +221,13 @@
       <a href="https://www.goodreads.com/user/show/156002766" target="_blank" rel="noopener">Goodreads</a>
       <a href="https://letterboxd.com/Humph123/" target="_blank" rel="noopener">Letterboxd</a>
     </footer>
+    <script>
+      document.querySelectorAll('.demo-video-wrap').forEach(wrap => {
+        const video = wrap.querySelector('video');
+        const btn = wrap.querySelector('.demo-replay');
+        btn.addEventListener('click', () => { wrap.classList.add('playing'); video.play(); });
+        video.addEventListener('ended', () => wrap.classList.remove('playing'));
+      });
+    </script>
   </body>
 </html>

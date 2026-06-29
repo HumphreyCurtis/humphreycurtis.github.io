@@ -608,11 +608,58 @@ h2 + .year-group-heading {
   margin-top: 0;
 }
 
+.demo-video-wrap {
+  position: relative;
+}
+
 .demo-video {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 4px;
+}
+
+.demo-video-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 4px;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.demo-video-wrap.playing::after {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.demo-replay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background: rgba(250, 248, 245, 0.95);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 11px 22px;
+  font-family: 'Alegreya', Georgia, serif;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+}
+
+.demo-replay:hover {
+  background: #fff;
+}
+
+.demo-video-wrap.playing .demo-replay {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .figure-constrained,
