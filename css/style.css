@@ -589,7 +589,7 @@ figcaption {
 /* --- Portfolio index typography --- */
 
 .portfolio-index .pub-media {
-  flex: 0 0 320px;
+  flex: 0 0 280px;
   aspect-ratio: 16 / 9;
   overflow: hidden;
 }
@@ -603,33 +603,30 @@ figcaption {
 .portfolio-index .pub-title {
   order: 1;
   font-family: 'Merriweather', Georgia, serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 3px;
-  letter-spacing: -0.01em;
+  line-height: 1.35;
+  margin-bottom: 4px;
+  color: var(--text);
+}
+
+.portfolio-index .pub-meta {
+  order: 2;
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-family: 'Alegreya', Georgia, serif;
+  font-style: italic;
+  margin-bottom: 6px;
 }
 
 .portfolio-index .pub-date {
-  order: 2;
-  font-size: 0.82rem;
-  letter-spacing: 0.02em;
-  text-transform: none;
+  order: 3;
+  font-size: 0.85rem;
   color: var(--muted);
   font-family: 'Alegreya', Georgia, serif;
   font-style: italic;
   font-weight: 400;
-  margin: 0 0 12px;
-}
-
-.portfolio-index .pub-meta {
-  order: 3;
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
-  font-family: 'Alegreya', Georgia, serif;
-  font-style: normal;
+  margin: 0;
 }
 
 .portfolio-index .pub-info {
@@ -678,9 +675,9 @@ figcaption {
 }
 
 .live-toolkit-section h4 {
-  margin-top: 52px;
+  margin-top: 44px;
   margin-bottom: 10px;
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: 0.01em;
 }
@@ -691,6 +688,12 @@ figcaption {
 
 .demo-video-wrap {
   position: relative;
+}
+
+.portfolio-figure:has(.demo-video-wrap) {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .demo-video {
@@ -837,10 +840,15 @@ figcaption {
   font-weight: 600;
   color: var(--accent);
   text-decoration: none;
-  margin-bottom: 28px;
+  margin-bottom: 16px;
 }
 
 .portfolio-back:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+.portfolio-back + h2 {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
 
 .portfolio-hero {
   width: 100%;
@@ -857,6 +865,51 @@ figcaption {
   display: block;
   margin-bottom: 32px;
 }
+
+.portfolio-hero.hero-compact {
+  max-width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Portfolio detail header: meta sidebar (left) beside hero image (right) */
+.portfolio-header {
+  display: grid;
+  grid-template-columns: 45fr 55fr;
+  gap: 40px;
+  align-items: stretch;
+  margin: 0 0 36px;
+  padding-top: 24px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.portfolio-header .portfolio-hero {
+  order: 2;
+  margin: 0;
+  align-self: center;
+}
+
+.project-sidebar {
+  border-right: 1px solid var(--border);
+  padding-right: 40px;
+  /* Extend through the header's vertical padding so the divider
+     meets the horizontal rules above and below without gaps. */
+  margin-top: -24px;
+  margin-bottom: -32px;
+  padding-top: 24px;
+  padding-bottom: 32px;
+}
+
+.project-sidebar .project-meta-item {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.project-sidebar .project-meta-item:last-child {
+  margin-bottom: 0;
+}
+
 
 .portfolio-gallery {
   display: grid;
@@ -1020,6 +1073,7 @@ main h2,
 .live-toolkit-section,
 .toolkit-section,
 .project-meta,
+.portfolio-header,
 .video-section,
 .year-group-heading,
 .year-heading {
@@ -1053,16 +1107,22 @@ h2 + .year-group-heading {
     width: 100%;
   }
 
-  .portfolio-index .pub-title {
-    font-size: 1.3rem;
+  .portfolio-header {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 
-  .portfolio-index .pub-meta {
-    font-size: 0.68rem;
+  .portfolio-header .portfolio-hero {
+    order: -1;
   }
 
-  .portfolio-index .pub-date {
-    font-size: 0.82rem;
+  .project-sidebar {
+    border-right: none;
+    padding-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   footer {
@@ -1081,9 +1141,9 @@ h2 + .year-group-heading {
   }
 
   .nav a {
-    padding: 4px 9px;
+    padding: 4px 7px;
     margin: 0 0 -1.5px -1px;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.02em;
   }
 
   .nav a:first-of-type {
@@ -1153,5 +1213,17 @@ h2 + .year-group-heading {
 
   footer a {
     margin: 0;
+  }
+}
+
+/* Very small phones — keep the tab bar on a single unbroken row */
+@media (max-width: 360px) {
+  .nav {
+    font-size: 0.72rem;
+  }
+
+  .nav a {
+    padding: 4px 5px;
+    letter-spacing: 0;
   }
 }
