@@ -9,6 +9,7 @@
   --accent: #2b5b9c;      /* cornflower frame + line          */
   --panel: #f2f7fd;       /* near-white cool panel            */
   --surround: #5b93cf;    /* sky fallback behind clouds       */
+  --media-max: 760px;     /* unified width for inline images + videos */
 }
 
 * { box-sizing: border-box; }
@@ -79,9 +80,16 @@ h2 {
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   margin: 32px 0 10px;
+}
+
+h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  margin: 28px 0 8px;
 }
 
 p { margin: 0 0 16px; }
@@ -704,9 +712,6 @@ figcaption {
 .live-toolkit-section h4 {
   margin-top: 44px;
   margin-bottom: 10px;
-  font-size: 1.05rem;
-  font-weight: 700;
-  letter-spacing: 0.01em;
 }
 
 .live-toolkit-section h4 + p {
@@ -717,8 +722,15 @@ figcaption {
   position: relative;
 }
 
-.portfolio-figure:has(.demo-video-wrap) {
-  max-width: 720px;
+/* One unified width for all inline portfolio media — demo videos, the
+   embedded YouTube video and content images — so figures line up down the
+   page. Widths always match; heights match wherever the source is 16:9. */
+.portfolio-figure:has(.demo-video-wrap),
+.portfolio-figure.is-demo,
+.figure-constrained,
+.codesign-section .portfolio-figure,
+.portfolio-hero-embed.embed-constrained {
+  max-width: var(--media-max);
   margin-left: auto;
   margin-right: auto;
 }
@@ -771,12 +783,6 @@ figcaption {
   pointer-events: none;
 }
 
-.figure-constrained,
-.codesign-section .portfolio-figure {
-  max-width: 780px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 .toolkit-card-figure {
   max-width: 560px;
@@ -892,6 +898,7 @@ figcaption {
   display: block;
   margin-bottom: 32px;
 }
+
 
 .portfolio-hero.hero-compact {
   max-width: 88%;
@@ -1010,21 +1017,27 @@ figcaption {
 .aphasia-support {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 22px;
   margin-top: 16px;
-  padding: 16px 22px;
+  padding: 18px 24px;
   border: 1px solid var(--border);
   background: var(--panel);
   border-radius: 4px;
   box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 3px rgba(12, 30, 60, 0.08);
 }
 
+.aphasia-logo-link {
+  flex-shrink: 0;
+  display: block;
+  padding-right: 22px;
+  border-right: 1px solid var(--border);
+}
+
 .aphasia-logo {
-  max-width: 80px;
+  max-width: 92px;
   height: auto;
   display: block;
-  opacity: 0.9;
-  flex-shrink: 0;
+  opacity: 0.92;
 }
 
 /* --- Contact --- */
@@ -1253,7 +1266,15 @@ h2 + .year-group-heading {
 
   .aphasia-support {
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
+    text-align: center;
+  }
+
+  .aphasia-logo-link {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding-right: 0;
+    padding-bottom: 14px;
   }
 
   .portfolio-gallery {
