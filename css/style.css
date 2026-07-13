@@ -1,31 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Merriweather:ital,wght@0,700;0,900;1,700&display=swap');
-
 :root {
   --max-width: 1140px;
-  --bg: #f4efe3;
-  --text: #211d16;
-  --muted: #6b6153;
-  --border: #cdbfa4;
-  --link: #834a2c;
-  --link-visited: #6a4b8a;
-  --accent: #834a2c;
-  --panel: #faf6ec;
-  --surround: #ece0c6;
+  --bg: #e1ebf8;          /* pale sky page card                */
+  --text: #16233a;        /* deep navy ink                    */
+  --muted: #55637a;       /* slate                            */
+  --border: #b3c4de;      /* cool grey-blue rule              */
+  --link: #2b5b9c;        /* cornflower link                  */
+  --link-visited: #6a4b8a;/* classic web purple               */
+  --accent: #2b5b9c;      /* cornflower frame + line          */
+  --panel: #f2f7fd;       /* near-white cool panel            */
+  --surround: #5b93cf;    /* sky fallback behind clouds       */
 }
 
 * { box-sizing: border-box; }
 
 img { max-width: 100%; height: auto; }
 
+/* Cloud sky backdrop: a self-contained SVG fractal-noise layer
+   thresholded into soft white clouds, over a vertical blue sky gradient.
+   Fixed, so the sky stays put while the page scrolls. */
 html {
-  background: var(--surround);
+  background-color: var(--surround);
+  background-image:
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='700' height='500'><filter id='c'><feTurbulence type='fractalNoise' baseFrequency='0.011' numOctaves='5' seed='11' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1.1 -0.32'/></filter><rect width='700' height='500' filter='url(%23c)'/></svg>"),
+    linear-gradient(180deg, #82b2e2 0%, #5f93cf 45%, #4378bd 100%);
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed, fixed;
 }
 
 body {
-  background: var(--surround);
+  background: transparent;   /* let the sky show through */
   color: var(--text);
-  font-family: 'Alegreya', Georgia, serif;
-  font-size: 1.1rem;
+  font-family: Tahoma, 'Segoe UI', 'MS Sans Serif', Geneva, Verdana, sans-serif;
+  font-size: 1.05rem;
   font-weight: 400;
   line-height: 1.75;
   max-width: var(--max-width);
@@ -38,7 +46,7 @@ body {
 
 
 h1, h2, h3, h4 {
-  font-family: 'Merriweather', Georgia, serif;
+  font-family: Tahoma, 'Segoe UI', 'MS Sans Serif', Geneva, Verdana, sans-serif;
 }
 
 h1 {
@@ -48,7 +56,7 @@ h1 {
   margin: 8px 0 4px;
   letter-spacing: 0.04em;
   font-variant: small-caps;
-  color: var(--accent);
+  color: #1b1b1b;   /* near-black, Win98 system-text feel */
 }
 
 h2 {
@@ -104,11 +112,15 @@ a:hover { text-decoration: none; }
   letter-spacing: 0.1em;
   font-weight: 500;
   vertical-align: bottom;
-  background: linear-gradient(to bottom, #f7f1e3 0%, #e6dbc3 100%);
+  background: linear-gradient(to bottom, #f5f9ff 0%, #c9d9f0 100%);
+  background-clip: padding-box;
   border: 1px solid var(--border);
+  border-top-color: #e6eefb;
+  border-left-color: #e6eefb;
   border-bottom: 1.5px solid var(--accent);
   border-radius: 7px 7px 0 0;
   margin: 0 0 -1.5px -1px;
+  box-shadow: inset 0 1.5px 0 rgba(255, 255, 255, 0.8);
   transition: color 0.15s ease, background 0.15s ease;
 }
 
@@ -118,7 +130,7 @@ a:hover { text-decoration: none; }
 
 .nav a:hover {
   color: var(--accent);
-  background: linear-gradient(to bottom, #fffdf7 0%, #f1e7d1 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #d8e4f5 100%);
 }
 
 .nav a.current {
@@ -127,6 +139,9 @@ a:hover { text-decoration: none; }
   background: linear-gradient(to bottom, #fffefa 0%, var(--bg) 100%);
   border: 1.5px solid var(--accent);
   border-bottom: none;
+  /* no highlight on the selected tab — its accent border alone frames it
+     as an open tab merging into the panel */
+  box-shadow: none;
   position: relative;
   z-index: 2;
 }
@@ -243,13 +258,13 @@ figcaption {
   border-radius: 4px;
   background: var(--panel);
   border: 1px solid var(--border);
-  box-shadow: 0 1px 3px rgba(80,60,30,0.08);
+  box-shadow: 0 1px 3px rgba(12,30,60,0.08);
   transition: background 0.18s ease, box-shadow 0.18s ease;
 }
 
 .pub-entry:hover {
-  background: #f5efe0;
-  box-shadow: 0 2px 7px rgba(80,60,30,0.13);
+  background: #eef4fc;
+  box-shadow: 0 2px 7px rgba(12,30,60,0.13);
   cursor: default;
 }
 
@@ -307,7 +322,7 @@ figcaption {
   text-transform: uppercase;
   vertical-align: middle;
   margin-right: 7px;
-  font-family: Georgia, serif;
+  font-family: Tahoma, 'Segoe UI', 'MS Sans Serif', Geneva, Verdana, sans-serif;
 }
 
 .pub-type-J  { background: #ddf0e4; color: #1a6e40; }
@@ -329,7 +344,7 @@ figcaption {
 }
 
 .pub-title {
-  font-family: 'Merriweather', Georgia, serif;
+  font-family: Tahoma, 'Segoe UI', 'MS Sans Serif', Geneva, Verdana, sans-serif;
   font-weight: 700;
   display: block;
   margin-bottom: 3px;
@@ -602,7 +617,7 @@ figcaption {
 
 .portfolio-index .pub-title {
   order: 1;
-  font-family: 'Merriweather', Georgia, serif;
+  font-family: Tahoma, 'Segoe UI', 'MS Sans Serif', Geneva, Verdana, sans-serif;
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.35;
@@ -614,7 +629,7 @@ figcaption {
   order: 2;
   font-size: 0.9rem;
   color: var(--muted);
-  font-family: 'Alegreya', Georgia, serif;
+  font-family: Tahoma, 'Segoe UI', 'MS Sans Serif', Geneva, Verdana, sans-serif;
   font-style: italic;
   margin-bottom: 6px;
 }
@@ -623,7 +638,7 @@ figcaption {
   order: 3;
   font-size: 0.85rem;
   color: var(--muted);
-  font-family: 'Alegreya', Georgia, serif;
+  font-family: Tahoma, 'Segoe UI', 'MS Sans Serif', Geneva, Verdana, sans-serif;
   font-style: italic;
   font-weight: 400;
   margin: 0;
@@ -638,8 +653,8 @@ figcaption {
   margin-top: auto;
   align-self: flex-end;
   padding-top: 16px;
-  font-size: 0.95rem;
-  font-family: 'Alegreya', Georgia, serif;
+  font-size: 0.85rem;
+  font-family: Tahoma, 'Segoe UI', 'MS Sans Serif', Geneva, Verdana, sans-serif;
   font-style: normal;
   color: var(--muted);
   letter-spacing: 0.04em;
@@ -722,11 +737,11 @@ figcaption {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  background: rgba(250, 248, 245, 0.95);
+  background: rgba(245, 249, 253, 0.95);
   border: 1px solid var(--border);
   border-radius: 4px;
   padding: 11px 22px;
-  font-family: 'Alegreya', Georgia, serif;
+  font-family: Tahoma, 'Segoe UI', 'MS Sans Serif', Geneva, Verdana, sans-serif;
   font-size: 1rem;
   letter-spacing: 0.06em;
   color: var(--text);
@@ -789,12 +804,12 @@ figcaption {
 }
 
 .toolkit-download:hover {
-  background: #f5efe0;
-  border-color: #b8a888;
+  background: #eef4fc;
+  border-color: #a6b9d8;
 }
 
 .toolkit-download-title {
-  font-family: 'Merriweather', Georgia, serif;
+  font-family: Tahoma, 'Segoe UI', 'MS Sans Serif', Geneva, Verdana, sans-serif;
   font-weight: 700;
   font-size: 0.9rem;
   flex: 1;
@@ -973,10 +988,11 @@ figcaption {
 }
 
 .cv-box {
-  padding: 12px 22px;
+  padding: 12px 22px 12px 14px;
   border: 1px solid var(--border);
   background: var(--panel);
   border-radius: 4px;
+  box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 3px rgba(12, 30, 60, 0.08);
 }
 
 .aphasia-support {
@@ -988,6 +1004,7 @@ figcaption {
   border: 1px solid var(--border);
   background: var(--panel);
   border-radius: 4px;
+  box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 3px rgba(12, 30, 60, 0.08);
 }
 
 .aphasia-logo {
@@ -1003,10 +1020,11 @@ figcaption {
 .contact-block {
   font-style: normal;
   line-height: 1.9;
-  padding: 4px 22px 18px;
+  padding: 4px 22px 18px 14px;
   border: 1px solid var(--border);
   background: var(--panel);
   border-radius: 4px;
+  box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 3px rgba(12, 30, 60, 0.08);
 }
 
 .contact-block h3 {
@@ -1031,8 +1049,10 @@ figcaption {
 footer {
   margin-top: 0;
   padding: 18px 32px;
-  background: #eee6d3;
+  background: #dbe6f4;
   border: 1.5px solid var(--accent);
+  /* Win98 "status bar" — sunken 3D bevel (dark top-left, light bottom-right) */
+  box-shadow: inset 1px 1px 0 rgba(20, 40, 70, 0.22), inset -1px -1px 0 rgba(255, 255, 255, 0.9);
   font-size: 0.9rem;
   color: var(--muted);
   text-align: center;
