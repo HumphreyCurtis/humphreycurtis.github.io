@@ -455,6 +455,10 @@ figcaption {
   --action-icon: var(--icon-slides);
 }
 
+.project-actions a.thesis-link {
+  --action-icon: var(--icon-document);
+}
+
 .pub-links .bibtex-copy {
   --action-icon: var(--icon-bibtex);
   appearance: none;
@@ -719,6 +723,10 @@ figcaption {
 
 .case-study-section {
   margin-top: 52px;
+}
+
+.case-study-section-first {
+  margin-top: 36px;
 }
 
 .live-toolkit-section h3,

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Turrellian LED Lamp — Humphrey Curtis's 2020 University of Bristol MSc project in affective computing, connected lighting and physical prototyping." />
+    <meta name="description" content="The Turrellian LED Lamp — Humphrey Curtis's 2020 MSc thesis exploring how self-reported mood, heart rate, HRV and skin temperature could orient ambient light." />
     <title>Turrellian LED Lamp — Humphrey Curtis</title>
     <link rel="stylesheet" href="../../css/style.css" />
     <link rel="icon" type="image/x-icon" href="../../images/favicon.ico" />
@@ -22,8 +22,8 @@
 
       <div class="portfolio-header">
         <img
-          src="../../images/turrellian/hero-lamp-and-interface.jpg"
-          alt="The full-height wooden Turrellian LED lamp beside its mood interface and M5Stack controller"
+          src="../../images/turrellian/interface-and-controller.jpg"
+          alt="The Turrellian reflective mood app beside its connected M5Stack microcontroller"
           class="portfolio-hero"
         />
 
@@ -42,44 +42,72 @@
           </div>
           <div class="project-meta-item">
             <span class="sidebar-label">Methods</span>
-            <span class="sidebar-value">Physical prototyping · Affective computing · Pilot evaluation</span>
+            <span class="sidebar-value">Affective computing · Biosensing · Physical prototyping · Pilot evaluation</span>
           </div>
           <div class="project-meta-item">
             <span class="sidebar-label">Technology</span>
-            <span class="sidebar-value">M5Stack ESP32 · WS2811 LEDs · MQTT · JavaScript</span>
+            <span class="sidebar-value">C++/Arduino · JavaScript · Processing/Java · MQTT/JSON</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="sidebar-label">Hardware</span>
+            <span class="sidebar-value">M5Stack/M5StickC · PulseSensor · MLX90614 · WS2811 LEDs</span>
           </div>
         </div>
       </div>
 
-      <div class="project-actions" aria-label="Turrellian LED Lamp links">
-        <a href="https://github.com/HumphreyCurtis/Turrellian-LED-lamp" target="_blank" rel="noopener">Code</a>
-        <a href="../../resources/turrellian-led-lamp-msc-thesis.pdf" target="_blank" rel="noopener">Read thesis</a>
+      <div class="project-actions" aria-label="Turrellian links">
+        <a href="https://github.com/HumphreyCurtis/Turrellian-LED-Lamp" target="_blank" rel="noopener">Code</a>
+        <a href="../../resources/turrellian-led-lamp-msc-thesis.pdf" class="thesis-link" target="_blank" rel="noopener">Read thesis</a>
       </div>
 
-      <p><strong>Turrellian</strong> was my 2020 MSc Computer Science project at the University of Bristol: a hand-built, networked floor lamp that translated reflective mood input into programmable colour sequences. Inspired by James Turrell's immersive light installations, it explored whether ambient light could become an affective interface rather than another manually controlled smart device.</p>
+      <p><strong>The Turrellian LED Lamp</strong> was my 2020 MSc Computer Science thesis at the University of Bristol: a 6.5-foot affect-sensitive system designed to orient ambient light using both self-reported mood and physiological feedback. A reflective journal captured the person's current and desired state, while prototypes sensed heart rate, heart-rate variability (HRV) and skin temperature. Inspired by James Turrell's installations, the lamp translated the target state into an immersive colour sequence.</p>
 
-      <section class="case-study-section">
-        <h3>From sketch to connected light</h3>
+      <section class="case-study-section case-study-section-first">
+        <h3>Designing the lamp</h3>
 
-        <p>The physical prototype began as a 1.5–2 metre corner lamp designed to wash two walls with colour. A timber body housed addressable LEDs, while the surrounding room became part of the display.</p>
+        <p>The tall timber column was designed for a corner, turning two walls into a light surface while taking up little floor space. Six activating or calming sequences mapped colour, saturation and movement to valence and arousal, drawing on the circumplex model of affect and colour-psychology research.</p>
 
         <figure class="portfolio-figure figure-constrained">
           <img src="../../images/turrellian/prototype-sketches.jpg" alt="Hand-drawn plans for the tall wooden Turrellian lamp, its corner placement and internal addressable LED strip" loading="lazy" />
           <figcaption>Early construction sketches: a corner-mounted light column designed to project colour into the room</figcaption>
         </figure>
 
-        <p>A browser-based journal captured a person's current and desired mood, then sent a small JSON message over MQTT. An M5Stack ESP32 received it and selected one of two programmed lighting behaviours: activating sequences for focused, excited or happy states; slower sequences for contented, serene or relaxed states.</p>
-
         <figure class="portfolio-figure figure-constrained">
-          <img src="../../images/turrellian/interface-and-controller.jpg" alt="Turrellian reflective mood web interface beside the connected M5Stack ESP32 controller" loading="lazy" />
-          <figcaption>The reflective web journal and embedded controller—the two ends of the MQTT prototype</figcaption>
+          <img src="../../images/turrellian/hero-lamp-and-interface.jpg" alt="The working Turrellian LED Lamp in a room beside its reflective mood interface and M5Stack controller" loading="lazy" />
+          <figcaption>The working prototype, reflective journal and embedded controller</figcaption>
         </figure>
       </section>
 
       <section class="case-study-section">
-        <h3>Bottom line</h3>
+        <h3>How the system worked</h3>
 
-        <p>The evaluation was necessarily exploratory, particularly during the disruption of 2020, and the lamp should not be read as a clinical intervention. Its value was as an end-to-end affective-computing prototype: combining interaction design, connected software, embedded programming and physical fabrication in one working system.</p>
+        <p>Turrellian combined two input streams. The browser journal recorded the person's current mood, context and intended emotional direction. A PulseSensor Amped connected to an M5Stack measured heart rate and HRV; an MLX90614 infrared sensor on an M5StickC measured skin temperature. Together, self-report and biosignals described the starting state and provided feedback on whether the light moved the person towards the desired valence–arousal region.</p>
+
+        <p>The journal and Mood Room interface were written in HTML, CSS and JavaScript. Browser and ESP32 devices published JSON through a HiveMQ MQTT broker. C++/Arduino firmware parsed the target state with ArduinoJson and PubSubClient, then used FastLED to drive one of six sequences across two WS2811 RGB strips. Processing/Java handled HRV visualisation, including Poincaré plots.</p>
+
+        <p>The working prototype was semi-automated: the person still selected the state they wanted to reach, while sensors supplied affective context and feedback. Continuous mood inference and machine learning were proposed as future work rather than presented as features of the system.</p>
+
+        <figure class="portfolio-figure figure-constrained">
+          <img src="../../images/turrellian/system-architecture.jpg" alt="System architecture connecting heart-rate and temperature sensors, a browser journal, MQTT, an ESP32 controller and the Turrellian LED Lamp" loading="lazy" />
+          <figcaption>The end-to-end architecture: biosensing and self-report connected to the lamp through MQTT</figcaption>
+        </figure>
+      </section>
+
+      <section class="case-study-section">
+        <h3>Pilot evaluation</h3>
+
+        <p>Six participants used the lamp and a Philips Hue smart bulb in a pandemic-constrained workplace study. Five-minute pre/post readings tracked heart rate, HRV and skin temperature. Four participants reported improved mood, while the thesis interpreted five participants' physiological readings as movement towards the requested state. Turrellian scored higher across all four AttrakDiff measures, most clearly for stimulation.</p>
+
+        <figure class="portfolio-figure figure-constrained">
+          <img src="../../images/turrellian/evaluation-results.png" alt="AttrakDiff results showing Turrellian rated above Philips Hue for pragmatic quality, identity, stimulation and attractiveness" loading="lazy" />
+          <figcaption>AttrakDiff comparison from the six-person pilot; the strongest difference was stimulation</figcaption>
+        </figure>
+      </section>
+
+      <section class="case-study-section">
+        <h3>Key findings</h3>
+
+        <p>The pilot suggested that personalised ambient light could support a desired mood, but the sample was too small and the recordings too brief for a general claim. The stronger contribution was the end-to-end architecture: it showed how subjective feedback and bodily signals could be combined to orient environmental light, joining interaction design, biosensing, connected software, embedded programming and physical fabrication.</p>
       </section>
     </main>
 
