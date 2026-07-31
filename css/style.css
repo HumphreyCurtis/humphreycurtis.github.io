@@ -450,7 +450,8 @@ figcaption {
   --action-icon: var(--icon-code);
 }
 
-.pub-links a[href$=".pdf"] {
+.pub-links a[href$=".pdf"],
+.project-actions a[href$=".pdf"] {
   --action-icon: var(--icon-slides);
 }
 
@@ -666,6 +667,10 @@ figcaption {
   padding: 10px;
 }
 
+.portfolio-index .watch-your-language-media {
+  background: #f3f2ee;
+}
+
 .portfolio-header-brief {
   grid-template-columns: 55fr 45fr;
 }
@@ -712,8 +717,13 @@ figcaption {
   border-top: 1px solid var(--border);
 }
 
+.case-study-section {
+  margin-top: 52px;
+}
+
 .live-toolkit-section h3,
-.toolkit-section h3 {
+.toolkit-section h3,
+.case-study-section h3 {
   margin-top: 0;
   margin-bottom: 16px;
   font-size: 1.2rem;
@@ -724,7 +734,8 @@ figcaption {
 }
 
 .live-toolkit-section > p,
-.toolkit-section > p {
+.toolkit-section > p,
+.case-study-section > p {
   margin-bottom: 28px;
 }
 
@@ -906,6 +917,15 @@ figcaption {
   margin-bottom: 32px;
 }
 
+.portfolio-video-embed {
+  margin-top: 0;
+}
+
+.portfolio-video-intro {
+  max-width: var(--media-max);
+  margin: 32px auto 16px;
+}
+
 /* Portfolio detail header: meta sidebar (left) beside hero image (right) */
 .portfolio-header {
   display: grid;
@@ -942,6 +962,16 @@ figcaption {
 
 .project-sidebar .project-meta-item:last-child {
   margin-bottom: 0;
+}
+
+.wyl-release-note {
+  max-width: 760px;
+  margin: 24px auto 32px;
+  padding: 14px 16px;
+  border-left: 3px solid var(--accent);
+  background: rgba(242, 247, 253, 0.72);
+  color: var(--muted);
+  font-size: 0.88rem;
 }
 
 .pub-card-link {

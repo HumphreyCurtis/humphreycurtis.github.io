@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Turrellian LED Lamp — Humphrey Curtis's 2020 University of Bristol MSc project in affective computing, connected lighting and physical prototyping." />
+    <title>Turrellian LED Lamp — Humphrey Curtis</title>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico" />
+  </head>
+  <body>
+    <h1>Humphrey Curtis</h1>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="../../index.html">Home</a><span class="sep"> // </span><a href="../research.html">Research</a><span class="sep"> // </span><a href="../news.html">News</a><span class="sep"> // </span><a href="../portfolio.html" class="current">Portfolio</a><span class="sep"> // </span><a href="../blog.html">Blog</a>
+    </nav>
+
+    <main>
+      <a href="../portfolio.html" class="portfolio-back">← Portfolio</a>
+
+      <h2>Turrellian LED Lamp</h2>
+
+      <div class="portfolio-header">
+        <img
+          src="../../images/turrellian/hero-lamp-and-interface.jpg"
+          alt="The full-height wooden Turrellian LED lamp beside its mood interface and M5Stack controller"
+          class="portfolio-hero"
+        />
+
+        <div class="project-sidebar">
+          <div class="project-meta-item">
+            <span class="sidebar-label">Year</span>
+            <span class="sidebar-value">2020</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="sidebar-label">Context</span>
+            <span class="sidebar-value">MSc Computer Science · University of Bristol</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="sidebar-label">Role</span>
+            <span class="sidebar-value">Researcher · Designer · Developer · Fabricator</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="sidebar-label">Methods</span>
+            <span class="sidebar-value">Physical prototyping · Affective computing · Pilot evaluation</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="sidebar-label">Technology</span>
+            <span class="sidebar-value">M5Stack ESP32 · WS2811 LEDs · MQTT · JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-actions" aria-label="Turrellian LED Lamp links">
+        <a href="https://github.com/HumphreyCurtis/Turrellian-LED-lamp" target="_blank" rel="noopener">Code</a>
+        <a href="../../resources/turrellian-led-lamp-msc-thesis.pdf" target="_blank" rel="noopener">Read thesis</a>
+      </div>
+
+      <p><strong>Turrellian</strong> was my 2020 MSc Computer Science project at the University of Bristol: a hand-built, networked floor lamp that translated reflective mood input into programmable colour sequences. Inspired by James Turrell's immersive light installations, it explored whether ambient light could become an affective interface rather than another manually controlled smart device.</p>
+
+      <section class="case-study-section">
+        <h3>From sketch to connected light</h3>
+
+        <p>The physical prototype began as a 1.5–2 metre corner lamp designed to wash two walls with colour. A timber body housed addressable LEDs, while the surrounding room became part of the display.</p>
+
+        <figure class="portfolio-figure figure-constrained">
+          <img src="../../images/turrellian/prototype-sketches.jpg" alt="Hand-drawn plans for the tall wooden Turrellian lamp, its corner placement and internal addressable LED strip" loading="lazy" />
+          <figcaption>Early construction sketches: a corner-mounted light column designed to project colour into the room</figcaption>
+        </figure>
+
+        <p>A browser-based journal captured a person's current and desired mood, then sent a small JSON message over MQTT. An M5Stack ESP32 received it and selected one of two programmed lighting behaviours: activating sequences for focused, excited or happy states; slower sequences for contented, serene or relaxed states.</p>
+
+        <figure class="portfolio-figure figure-constrained">
+          <img src="../../images/turrellian/interface-and-controller.jpg" alt="Turrellian reflective mood web interface beside the connected M5Stack ESP32 controller" loading="lazy" />
+          <figcaption>The reflective web journal and embedded controller—the two ends of the MQTT prototype</figcaption>
+        </figure>
+      </section>
+
+      <section class="case-study-section">
+        <h3>Bottom line</h3>
+
+        <p>The evaluation was necessarily exploratory, particularly during the disruption of 2020, and the lamp should not be read as a clinical intervention. Its value was as an end-to-end affective-computing prototype: combining interaction design, connected software, embedded programming and physical fabrication in one working system.</p>
+      </section>
+    </main>
+
+    <footer>
+      <a href="https://scholar.google.com/citations?user=t4HUO4MAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://www.linkedin.com/in/humphreycurtis1/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/HumphreyCurtis" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://twitter.com/HumphreyCurtis4" target="_blank" rel="noopener">Twitter</a>
+      <a href="https://www.goodreads.com/user/show/156002766" target="_blank" rel="noopener">Goodreads</a>
+      <a href="https://letterboxd.com/Humph123/" target="_blank" rel="noopener">Letterboxd</a>
+    </footer>
+  </body>
+</html>
