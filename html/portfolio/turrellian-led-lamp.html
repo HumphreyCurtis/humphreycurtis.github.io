@@ -60,7 +60,7 @@
         <a href="../../resources/turrellian-led-lamp-msc-thesis.pdf" class="thesis-link" target="_blank" rel="noopener">Read thesis</a>
       </div>
 
-      <p><strong>The Turrellian LED Lamp</strong> was my 2020 MSc Computer Science thesis at the University of Bristol: a 6.5-foot affect-sensitive system designed to orient ambient light using both self-reported mood and physiological feedback. A reflective journal captured the person's current and desired state, while prototypes sensed heart rate, heart-rate variability (HRV) and skin temperature. Inspired by James Turrell's installations, the lamp translated the target state into an immersive colour sequence.</p>
+      <p><strong>The Turrellian LED Lamp</strong> was my 2020 MSc Computer Science thesis at the University of Bristol, supervised by <a href="https://www.bristol.ac.uk/people/person/Paul-O'Dowd-d54e9ad6-41de-4eef-81c6-1ee227ced8dc/" target="_blank" rel="noopener">Dr Paul O'Dowd</a>: a 6.5-foot affect-sensitive system designed to orient ambient light using both self-reported mood and physiological feedback. A reflective journal captured the person's current and desired state, while prototypes sensed heart rate, heart-rate variability (HRV) and skin temperature. Inspired by James Turrell's installations, the lamp translated the target state into an immersive colour sequence.</p>
 
       <section class="case-study-section case-study-section-first">
         <h3>Designing the lamp</h3>
@@ -81,7 +81,7 @@
       <section class="case-study-section">
         <h3>How the system worked</h3>
 
-        <p>Turrellian combined two input streams. The browser journal recorded the person's current mood, context and intended emotional direction. A PulseSensor Amped connected to an M5Stack measured heart rate and HRV; an MLX90614 infrared sensor on an M5StickC measured skin temperature. Together, self-report and biosignals described the starting state and provided feedback on whether the light moved the person towards the desired valence–arousal region.</p>
+        <p>Turrellian combined two input streams. The browser journal recorded the person's current mood, context and intended emotional direction. A PulseSensor Amped connected to an M5Stack measured heart rate and HRV; an MLX90614 infrared sensor on an M5StickC measured skin temperature. Together, self-reporting and biosignals described the starting state and provided feedback on whether the light moved the person towards the desired valence–arousal region.</p>
 
         <p>The journal and Mood Room interface were written in HTML, CSS and JavaScript. Browser and ESP32 devices published JSON through a HiveMQ MQTT broker. C++/Arduino firmware parsed the target state with ArduinoJson and PubSubClient, then used FastLED to drive one of six sequences across two WS2811 RGB strips. Processing/Java handled HRV visualisation, including Poincaré plots.</p>
 
@@ -89,7 +89,7 @@
 
         <figure class="portfolio-figure figure-constrained">
           <img src="../../images/turrellian/system-architecture.jpg" alt="System architecture connecting heart-rate and temperature sensors, a browser journal, MQTT, an ESP32 controller and the Turrellian LED Lamp" loading="lazy" />
-          <figcaption>The end-to-end architecture: biosensing and self-report connected to the lamp through MQTT</figcaption>
+          <figcaption>The end-to-end architecture: biosensing and self-reporting connected to the lamp through MQTT</figcaption>
         </figure>
       </section>
 

@@ -1137,6 +1137,108 @@ h2 + .year-group-heading {
   padding-top: 6px;
 }
 
+/* --- Chronology system ---
+   A shared timeline language for dated work: the rail establishes sequence,
+   while named stages explain what each date meant in the wider career. */
+
+.chronology-list {
+  --timeline-axis: -12px;
+  --timeline-tail: 64px;
+  position: relative;
+  padding-top: 4px;
+}
+
+.chronology-list::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  bottom: calc(-1 * var(--timeline-tail));
+  left: var(--timeline-axis);
+  width: 1px;
+  background: #c2d1e4;
+}
+
+.portfolio-era-heading {
+  position: relative;
+  display: grid;
+  grid-template-columns: 0 auto minmax(0, 1fr);
+  align-items: center;
+  gap: 0;
+  margin: 0 0 24px;
+  list-style: none;
+  white-space: nowrap;
+}
+
+.portfolio-era-heading:first-child {
+  margin: 2px 0 14px;
+}
+
+.era-years {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: baseline;
+  padding-right: 0;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.era-marker {
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+  z-index: 1;
+  justify-self: start;
+  width: 10px;
+  margin-left: var(--timeline-axis);
+  height: 1px;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  color: #c2d1e4;
+  background: currentColor;
+}
+
+.era-copy {
+  grid-column: 3;
+  grid-row: 1;
+  align-self: baseline;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  line-height: 1.2;
+}
+
+.era-copy::before {
+  content: "—";
+  margin-left: 4px;
+  margin-right: 4px;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.era-copy strong {
+  display: block;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.chronology-list .pub-entry {
+  position: relative;
+  margin-left: calc(var(--timeline-axis) + 24px);
+  margin-bottom: 24px;
+}
+
 /* --- Mobile --- */
 
 @media (max-width: 700px) {
@@ -1159,6 +1261,36 @@ h2 + .year-group-heading {
   .portfolio-index .pub-meta { font-size: 0.82rem; }
   .portfolio-index .pub-date,
   .portfolio-cta { font-size: 0.78rem; }
+
+  .chronology-list {
+    --timeline-axis: 8px;
+    --timeline-tail: 54px;
+  }
+
+  .chronology-list::before,
+  .era-marker {
+    display: none;
+  }
+
+  .portfolio-era-heading {
+    grid-template-columns: auto minmax(0, 1fr);
+    margin: 0 0 24px;
+  }
+
+  .era-years {
+    grid-column: 1;
+    padding: 0;
+  }
+
+  .era-copy {
+    grid-column: 2;
+    grid-row: 1;
+    margin-left: 0;
+  }
+
+  .chronology-list .pub-entry {
+    margin-left: 0;
+  }
 
   .sidebar-value { font-size: 0.8rem; }
 

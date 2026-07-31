@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A 2021 King's College London data visualisation project exploring the early global COVID-19 vaccination rollout with D3.js." />
+    <title>COVID-19 Vaccination Visualisation — Humphrey Curtis</title>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico" />
+  </head>
+  <body>
+    <h1>Humphrey Curtis</h1>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="../../index.html">Home</a><span class="sep"> // </span><a href="../research.html">Research</a><span class="sep"> // </span><a href="../news.html">News</a><span class="sep"> // </span><a href="../portfolio.html" class="current">Portfolio</a><span class="sep"> // </span><a href="../blog.html">Blog</a>
+    </nav>
+
+    <main>
+      <a href="../portfolio.html" class="portfolio-back">← Portfolio</a>
+
+      <h2>COVID-19 Vaccination Visualisation</h2>
+
+      <div class="portfolio-header">
+        <img
+          src="../../images/data-visualisation/global-vaccination-map.jpg"
+          alt="Interactive choropleth showing the global COVID-19 vaccination rollout in early 2021"
+          class="portfolio-hero"
+        />
+
+        <div class="project-sidebar">
+          <div class="project-meta-item">
+            <span class="sidebar-label">Year</span>
+            <span class="sidebar-value">2021</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="sidebar-label">Context</span>
+            <span class="sidebar-value">MSc coursework · King's College London</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="sidebar-label">Role</span>
+            <span class="sidebar-value">Researcher · Designer · Developer</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="sidebar-label">Methods</span>
+            <span class="sidebar-value">Data analysis · Sketching · Iterative prototyping</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="sidebar-label">Technology</span>
+            <span class="sidebar-value">D3.js · JavaScript · Java · TopoJSON</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-actions" aria-label="COVID-19 data visualisation links">
+        <a href="https://humphreycurtis.github.io/7CCSMSDV-Project-Data-Visualisation/" target="_blank" rel="noopener">Live visualisation</a>
+        <a href="https://github.com/HumphreyCurtis/7CCSMSDV-Project-Data-Visualisation" target="_blank" rel="noopener">Code</a>
+        <a href="../../resources/kcl-covid-19-data-visualisation-report.pdf" class="thesis-link" target="_blank" rel="noopener">Read report</a>
+      </div>
+
+      <p><strong>COVID-19 Vaccination Visualisation</strong> was a 2021 project for the Simulation and Data Visualisation module in <a href="https://www.kcl.ac.uk/informatics" target="_blank" rel="noopener">King's College London's Department of Informatics</a>. It asked how the early vaccine rollout differed between nations, using a choropleth, lollipop chart and donut chart to move from a global overview to direct country comparisons.</p>
+
+      <section class="case-study-section case-study-section-first">
+        <h3>Designing the views</h3>
+
+        <p>The coursework began with four directions: a bubble map of infections over time, an HDI and deaths scatterplot, a vaccination choropleth and an HDI-ordered Sankey diagram. Sketches and low-fidelity tests helped narrow the final build to the vaccination question, with linked views for geography, ranking and share of the worldwide total.</p>
+
+        <figure class="portfolio-figure figure-constrained">
+          <img src="../../images/data-visualisation/original-dashboard-sketch.jpg" alt="Original hand-drawn dashboard sketch combining a vaccination map, donut chart and lollipop chart" loading="lazy" />
+          <figcaption>The original Design 3 sketch from the submitted report: map, leading nations and country comparison</figcaption>
+        </figure>
+
+        <figure class="portfolio-figure figure-constrained">
+          <img src="../../images/data-visualisation/vaccination-map-wireframes.png" alt="Early choropleth wireframes comparing total vaccinations and people vaccinated proportionally" loading="lazy" />
+          <figcaption>Low-fidelity map studies that developed into the final interactive choropleth</figcaption>
+        </figure>
+      </section>
+
+      <section class="case-study-section">
+        <h3>Building the dashboard</h3>
+
+        <p>The browser views were built with HTML, CSS, JavaScript, <a href="https://d3js.org/" target="_blank" rel="noopener">D3.js</a> and <a href="https://github.com/topojson/topojson" target="_blank" rel="noopener">TopoJSON</a>. A Java and JSON.simple pipeline parsed an <a href="https://ourworldindata.org/covid-vaccinations" target="_blank" rel="noopener">Our World in Data</a> snapshot, extracted country and worldwide totals, and calculated the proportional measures used by the map.</p>
+      </section>
+
+      <section class="case-study-section">
+        <h3>The live application</h3>
+
+        <p>The finished application pairs the world map with two closer comparisons. The lollipop chart exposes each country's reported total, while the donut chart places the five leading nations against the rest of the world. Both can switch between total vaccinations and people vaccinated.</p>
+
+        <figure class="portfolio-figure figure-constrained">
+          <img src="../../images/data-visualisation/live-country-comparison.jpg" alt="Live country-comparison view showing vaccination totals in an interactive lollipop chart" loading="lazy" />
+          <figcaption>Country comparison in the current live application</figcaption>
+        </figure>
+
+        <figure class="portfolio-figure figure-constrained">
+          <img src="../../images/data-visualisation/live-leading-nations.jpg" alt="Live leading-nations view comparing five countries with the rest of the world in a donut chart" loading="lazy" />
+          <figcaption>The five leading national totals compared with the rest of the world</figcaption>
+        </figure>
+
+        <p><strong>Historical data:</strong> the visualisations use records available through 9 March 2021. Each country shows its latest report within that archived dataset, so some national reporting dates are earlier. The project is presented as a record of the 2021 coursework—not as a current public-health dashboard.</p>
+      </section>
+    </main>
+
+    <footer>
+      <a href="https://scholar.google.com/citations?user=t4HUO4MAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://www.linkedin.com/in/humphreycurtis1/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/HumphreyCurtis" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://twitter.com/HumphreyCurtis4" target="_blank" rel="noopener">Twitter</a>
+      <a href="https://www.goodreads.com/user/show/156002766" target="_blank" rel="noopener">Goodreads</a>
+      <a href="https://letterboxd.com/Humph123/" target="_blank" rel="noopener">Letterboxd</a>
+    </footer>
+  </body>
+</html>
