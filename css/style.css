@@ -291,6 +291,7 @@ figure img {
   position: absolute;
   top: 2px;
   left: calc(-1 * var(--home-gap) + 6px);
+  transform: translateX(-50%);
   width: 7px;
   height: 7px;
   border: 2px solid var(--bg);
@@ -1511,7 +1512,7 @@ h2 + .year-group-heading {
 
   .home-timeline-marker::before {
     top: 1px;
-    left: -5px;
+    left: 0;
     width: 6px;
     height: 6px;
   }
