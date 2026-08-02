@@ -232,11 +232,6 @@ figure img {
 
 .home-intro p:last-child { margin-bottom: 0; }
 
-.home-personal {
-  color: var(--muted);
-  font-size: inherit;
-}
-
 /* A compact homepage chronology, adapted to the site's project-led visual
    language rather than introducing a second, card-heavy design system. */
 .home-timeline {
