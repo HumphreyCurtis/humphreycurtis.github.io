@@ -212,10 +212,135 @@ figure img {
 }
 
 .home-figure {
-  max-width: 90%;
+  max-width: 240px;
   margin-left: auto;
   margin-right: auto;
 }
+
+.home-figure img {
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+}
+
+.home-intro {
+  max-width: 780px;
+  margin: 24px auto 34px;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.home-intro p:last-child { margin-bottom: 0; }
+
+.home-personal {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* A compact homepage chronology, adapted to the site's project-led visual
+   language rather than introducing a second, card-heavy design system. */
+.home-timeline {
+  --home-date-width: 108px;
+  --home-media-width: 92px;
+  --home-gap: 18px;
+  position: relative;
+  max-width: 940px;
+  margin: 0 auto 18px;
+  padding-top: 10px;
+}
+
+.home-timeline::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  bottom: 0;
+  left: calc(var(--home-date-width) + 6px);
+  width: 1px;
+  background: var(--border);
+}
+
+.home-timeline-entry {
+  display: grid;
+  grid-template-columns: var(--home-date-width) var(--home-media-width) minmax(0, 1fr);
+  gap: var(--home-gap);
+  align-items: start;
+  position: relative;
+  min-height: 92px;
+  padding-bottom: 24px;
+}
+
+.home-timeline-entry:last-child { padding-bottom: 0; }
+
+.home-timeline-date {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.25;
+  padding-top: 2px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.home-timeline-marker {
+  position: relative;
+  min-height: 70px;
+}
+
+.home-timeline-marker::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: calc(-1 * var(--home-gap) + 6px);
+  width: 7px;
+  height: 7px;
+  border: 2px solid var(--bg);
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.home-timeline-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 82px;
+  height: 72px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--panel);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.home-timeline-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-timeline-logo img {
+  width: 74%;
+  height: 74%;
+  object-fit: contain;
+}
+
+.home-timeline-monogram {
+  background: linear-gradient(145deg, #f7faff, #d7e4f5);
+  font-size: 1rem;
+  font-weight: 700;
+  font-variant: small-caps;
+  letter-spacing: 0.12em;
+}
+
+.home-timeline-copy {
+  max-width: 650px;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.home-timeline-copy p { margin: -3px 0 0; }
 
 figcaption {
   font-style: italic;
@@ -1335,6 +1460,59 @@ h2 + .year-group-heading {
   .nav a {
     padding: 4px 7px;
     letter-spacing: 0.02em;
+  }
+
+  .home-figure { max-width: 170px; }
+
+  .home-intro {
+    margin: 20px auto 28px;
+    text-align: left;
+    font-size: 0.92rem;
+  }
+
+  .home-timeline {
+    --home-date-width: 66px;
+    --home-gap: 18px;
+    padding-top: 6px;
+  }
+
+  .home-timeline::before {
+    top: 11px;
+    left: 72px;
+  }
+
+  .home-timeline-entry {
+    grid-template-columns: var(--home-date-width) minmax(0, 1fr);
+    min-height: 62px;
+    gap: var(--home-gap);
+    padding-bottom: 26px;
+  }
+
+  .home-timeline-date {
+    font-size: 0.65rem;
+    white-space: normal;
+  }
+
+  .home-timeline-marker::before {
+    top: 1px;
+    left: -5px;
+    width: 6px;
+    height: 6px;
+  }
+
+  .home-timeline-marker {
+    position: absolute;
+    top: 0;
+    left: 72px;
+    min-height: 0;
+  }
+
+  .home-timeline-image { display: none; }
+
+  .home-timeline-copy {
+    grid-column: 2;
+    font-size: 0.82rem;
+    line-height: 1.5;
   }
 
   h2 { margin-top: 32px; }
