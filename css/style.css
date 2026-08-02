@@ -213,26 +213,27 @@ figure img {
 
 .home-figure {
   max-width: none;
-  width: 100%;
-  margin-left: 0;
+  width: 96%;
+  margin-left: auto;
   margin-right: auto;
 }
 
 .home-figure figcaption { text-align: left; }
 
 .home-intro {
-  max-width: 780px;
-  margin: 24px 0 34px;
+  max-width: 720px;
+  margin: 20px auto 34px;
   text-align: left;
-  font-size: 1rem;
-  line-height: 1.65;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  text-wrap: pretty;
 }
 
 .home-intro p:last-child { margin-bottom: 0; }
 
 .home-personal {
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: inherit;
 }
 
 /* A compact homepage chronology, adapted to the site's project-led visual
@@ -1477,6 +1478,10 @@ h2 + .year-group-heading {
     margin: 20px 0 28px;
     text-align: left;
     font-size: 0.92rem;
+  }
+
+  .home-figure {
+    width: 100%;
   }
 
   .home-timeline {
