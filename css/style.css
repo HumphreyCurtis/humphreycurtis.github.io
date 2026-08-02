@@ -321,6 +321,12 @@ figure img {
   object-fit: contain;
 }
 
+.home-timeline-logo-kcl img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .home-timeline-logo-exeter {
   background: #003c3c;
   border-color: #003c3c;
