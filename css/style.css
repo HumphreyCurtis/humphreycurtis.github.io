@@ -212,17 +212,18 @@ figure img {
 }
 
 .home-figure {
-  max-width: 90%;
-  margin-left: auto;
+  max-width: none;
+  width: 100%;
+  margin-left: 0;
   margin-right: auto;
 }
 
-.home-figure figcaption { text-align: center; }
+.home-figure figcaption { text-align: left; }
 
 .home-intro {
   max-width: 780px;
-  margin: 24px auto 34px;
-  text-align: center;
+  margin: 24px 0 34px;
+  text-align: left;
   font-size: 1rem;
   line-height: 1.65;
 }
@@ -1473,8 +1474,8 @@ h2 + .year-group-heading {
   }
 
   .home-intro {
-    margin: 20px auto 28px;
-    text-align: center;
+    margin: 20px 0 28px;
+    text-align: left;
     font-size: 0.92rem;
   }
 
