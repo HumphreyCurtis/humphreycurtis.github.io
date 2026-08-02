@@ -792,6 +792,10 @@ figcaption {
   background: #f3f2ee;
 }
 
+.portfolio-index .portfolio-paper-media {
+  background: #f6f8fb;
+}
+
 .portfolio-header-brief {
   grid-template-columns: 55fr 45fr;
 }
@@ -1032,6 +1036,14 @@ figcaption {
   object-fit: cover;
   margin-bottom: 32px;
   display: block;
+}
+
+.portfolio-paper-hero {
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  padding: 16px;
+  background: #f6f8fb;
+  border: 1px solid var(--border);
 }
 
 .portfolio-hero-embed {
