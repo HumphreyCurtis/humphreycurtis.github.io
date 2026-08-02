@@ -212,22 +212,17 @@ figure img {
 }
 
 .home-figure {
-  max-width: 240px;
-  margin-left: auto;
+  max-width: 90%;
+  margin-left: 0;
   margin-right: auto;
 }
 
-.home-figure img {
-  aspect-ratio: 1;
-  object-fit: cover;
-  border: 1px solid var(--border);
-  border-radius: 50%;
-}
+.home-figure figcaption { text-align: left; }
 
 .home-intro {
   max-width: 780px;
-  margin: 24px auto 34px;
-  text-align: center;
+  margin: 24px 0 34px;
+  text-align: left;
   font-size: 1rem;
   line-height: 1.65;
 }
@@ -247,7 +242,7 @@ figure img {
   --home-gap: 18px;
   position: relative;
   max-width: 940px;
-  margin: 0 auto 18px;
+  margin: 0 0 18px;
   padding-top: 10px;
 }
 
@@ -321,17 +316,14 @@ figure img {
 }
 
 .home-timeline-logo img {
-  width: 74%;
-  height: 74%;
+  width: 88%;
+  height: 80%;
   object-fit: contain;
 }
 
-.home-timeline-monogram {
-  background: linear-gradient(145deg, #f7faff, #d7e4f5);
-  font-size: 1rem;
-  font-weight: 700;
-  font-variant: small-caps;
-  letter-spacing: 0.12em;
+.home-timeline-logo-exeter {
+  background: #003c3c;
+  border-color: #003c3c;
 }
 
 .home-timeline-copy {
@@ -1461,8 +1453,6 @@ h2 + .year-group-heading {
     padding: 4px 7px;
     letter-spacing: 0.02em;
   }
-
-  .home-figure { max-width: 170px; }
 
   .home-intro {
     margin: 20px auto 28px;
