@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Argupedia, a 2021 King's College London MSc project for constructing, mapping and formally evaluating structured debates." />
+    <title>Argupedia — Humphrey Curtis</title>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico" />
+  </head>
+  <body>
+    <h1>Humphrey Curtis</h1>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="../../index.html">Home</a><span class="sep"> // </span><a href="../research.html">Research</a><span class="sep"> // </span><a href="../news.html">News</a><span class="sep"> // </span><a href="../portfolio.html" class="current">Portfolio</a><span class="sep"> // </span><a href="../blog.html">Blog</a>
+    </nav>
+
+    <main>
+      <a href="../portfolio.html" class="portfolio-back">← Portfolio</a>
+
+      <h2>Argupedia</h2>
+
+      <div class="portfolio-header">
+        <img
+          src="../../images/argupedia/argupedia-interface.png"
+          alt="Argupedia interface for constructing arguments beside an interactive debate graph"
+          class="portfolio-hero"
+        />
+
+        <div class="project-sidebar">
+          <div class="project-meta-item">
+            <span class="sidebar-label">Year</span>
+            <span class="sidebar-value">2021</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="sidebar-label">Context</span>
+            <span class="sidebar-value">MSc final project · King's College London</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="sidebar-label">Role</span>
+            <span class="sidebar-value">Researcher · Designer · Developer</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="sidebar-label">Methods</span>
+            <span class="sidebar-value">Prototyping · Algorithm design · A/B UX pilot</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="sidebar-label">Technology</span>
+            <span class="sidebar-value">JavaScript · D3.js · Dagre · Firebase</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-actions" aria-label="Argupedia project links">
+        <a href="https://humphreycurtis.github.io/Argupedia/" target="_blank" rel="noopener">Live demo</a>
+        <a href="https://github.com/HumphreyCurtis/Argupedia" target="_blank" rel="noopener">Code</a>
+        <a href="../../resources/argupedia-msc-project-report.pdf" class="thesis-link" target="_blank" rel="noopener">Read project report</a>
+        <a href="https://youtu.be/1BaNoLEGmrU" target="_blank" rel="noopener">Video instructions</a>
+      </div>
+
+      <p><strong>Argupedia</strong> was my 2021 final project for the <a href="https://www.kcl.ac.uk/study/postgraduate-taught/courses/advanced-computing-msc" target="_blank" rel="noopener">MSc Advanced Computing at King's College London</a>, supervised by <a href="https://www.kcl.ac.uk/people/sanjay-modgil/" target="_blank" rel="noopener">Dr Sanjay Modgil</a>. It explored a constructive alternative to chronological debate threads: people build structured arguments, direct counterarguments at specific claims and inspect the resulting debate as a graph.</p>
+
+      <section class="case-study-section case-study-section-first">
+        <h3>Structuring debate</h3>
+
+        <p>Argupedia guides each contribution through one of eight <a href="https://philosophicaldisquisitions.blogspot.com/2010/03/argumentation-schemes-part-1.html" target="_blank" rel="noopener">argumentation schemes</a>. The selected scheme determines the supporting fields and the critical questions available to challenge its assumptions. Claims become nodes; attacks become directed arrows.</p>
+
+        <figure class="portfolio-figure figure-constrained">
+          <img src="../../images/argupedia/argupedia-labelled-graph.png" alt="Argupedia debate graph under preferred semantics, with accepted arguments in green and a rejected argument in red" loading="lazy" />
+          <figcaption>Preferred semantics applied to the example debate: accepted, rejected and undecided labels remain tied to the graph structure</figcaption>
+        </figure>
+      </section>
+
+      <section class="case-study-section">
+        <h3>Building and restoring the system</h3>
+
+        <p>The original prototype used JavaScript, <a href="https://d3js.org/" target="_blank" rel="noopener">D3.js</a>, Dagre and Firebase Cloud Firestore to store arguments and attack relationships, render interactive graphs and apply labelling inspired by <a href="https://doi.org/10.1016/0004-3702(94)00041-X" target="_blank" rel="noopener">Dung's abstract argumentation framework</a>. The current open-source edition replaces the retired backend with private browser storage, adds versioned JSON import and export, and supports grounded, complete and preferred semantics alongside SVG and PNG graph exports.</p>
+      </section>
+
+      <section class="case-study-section">
+        <h3>Pilot evaluation</h3>
+
+        <p>Four participants remotely compared Argupedia with Debate.org using AttrakDiff questionnaires and qualitative feedback. All four reported learning more about argumentation, logic and debate with Argupedia; it also scored higher for stimulation and engagement, but lower for pragmatic usability. As a small, non-random pilot conducted during the pandemic, the study identified promising directions rather than generalisable findings.</p>
+      </section>
+    </main>
+
+    <footer>
+      <a href="https://scholar.google.com/citations?user=t4HUO4MAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://www.linkedin.com/in/humphreycurtis1/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/HumphreyCurtis" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://twitter.com/HumphreyCurtis4" target="_blank" rel="noopener">Twitter</a>
+      <a href="https://www.goodreads.com/user/show/156002766" target="_blank" rel="noopener">Goodreads</a>
+      <a href="https://letterboxd.com/Humph123/" target="_blank" rel="noopener">Letterboxd</a>
+    </footer>
+  </body>
+</html>
