@@ -218,7 +218,7 @@ figure img {
   margin-right: auto;
 }
 
-.home-figure figcaption { text-align: left; }
+.home-figure figcaption { text-align: center; }
 
 .home-intro {
   max-width: none;
