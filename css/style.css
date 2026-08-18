@@ -823,6 +823,7 @@ figcaption {
 .project-actions {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
   gap: 10px;
   margin: -18px 0 32px;
@@ -836,6 +837,31 @@ figcaption {
 
 .project-actions a[href*="overleaf.com"] {
   --action-icon: var(--icon-document);
+}
+
+.project-actions a.app-store-badge {
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  line-height: 0;
+}
+
+.project-actions a.app-store-badge::before {
+  display: none;
+}
+
+.project-actions a.app-store-badge:hover {
+  border: 0;
+  background: transparent;
+}
+
+.app-store-badge img {
+  display: block;
+  width: auto;
+  height: 30px;
 }
 
 /* --- Live toolkit demo section --- */
@@ -974,6 +1000,10 @@ figcaption {
   transition: background 0.15s ease, border-color 0.15s ease;
 }
 
+.toolkit-download:visited {
+  color: var(--text);
+}
+
 .toolkit-download:hover {
   background: #eef4fc;
   border-color: #a6b9d8;
@@ -987,7 +1017,7 @@ figcaption {
 
 .toolkit-download-meta {
   font-size: 0.75rem;
-  color: var(--muted);
+  color: var(--text);
   letter-spacing: 0.05em;
   text-transform: uppercase;
   white-space: nowrap;
@@ -1002,7 +1032,7 @@ figcaption {
 
 .toolkit-video-item {
   font-size: 0.88rem;
-  color: var(--muted);
+  color: var(--text);
   padding: 10px 14px;
   border-left: 2px solid var(--border);
   line-height: 1.5;
