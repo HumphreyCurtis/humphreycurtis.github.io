@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portfolio — Humphrey Curtis</title>
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/style.css?v=20260819-portfolio-cleanup" />
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
 
   </head>
@@ -18,38 +18,14 @@
     <main>
       <p>Alongside my academic research I design and build empowering tools and software — including: mobile and wearable applications for people with disabilities, and AI-powered tools for navigating public services.</p>
 
-      <h2>Portfolio</h2>
+      <ul class="pub-list portfolio-index portfolio-list-view">
 
-      <ul class="pub-list portfolio-index chronology-list">
-
-        <li class="portfolio-era-heading era-current">
-          <span class="era-years">2025–present</span>
-          <span class="era-marker" aria-hidden="true"></span>
-          <span class="era-copy">
-            <strong>Current work</strong>
-          </span>
-        </li>
-
-        <li class="pub-entry">
-          <a href="./portfolio/advokit.html" class="pub-card-link">
-            <div class="pub-media">
-              <img src="../images/advokit/Advokit-Workshop-Session.jpg" alt="Advokit co-design workshop session with stroke survivors" loading="lazy" />
-            </div>
-            <div class="pub-info">
-              <span class="pub-title">Advokit</span>
-              <div class="pub-meta">Generative AI · LLM Integration · Full-Stack Development · Deployment · Co-design</div>
-              <div class="pub-date">2025–present</div>
-              <div class="portfolio-cta">View project →</div>
-            </div>
-          </a>
-        </li>
-
-        <li class="portfolio-era-heading era-phd">
-          <span class="era-years">2021–2026</span>
-          <span class="era-marker" aria-hidden="true"></span>
-          <span class="era-copy">
-            <strong>Doctoral research</strong>
-          </span>
+        <li class="portfolio-list-header" aria-hidden="true">
+          <span></span>
+          <span>Project</span>
+          <span>Client</span>
+          <span>Focus</span>
+          <span>Year</span>
         </li>
 
         <li class="pub-entry">
@@ -60,22 +36,39 @@
             <div class="pub-info">
               <span class="pub-title">KCL PhD Thesis Template</span>
               <div class="pub-meta">LaTeX · Modular document architecture · Typesetting · Open source</div>
+              <div class="pub-client">PhD @ King's College London</div>
+              <div class="pub-focus">Open-Source Template</div>
               <div class="pub-date">2026</div>
-              <div class="portfolio-cta">View project →</div>
+            </div>
+          </a>
+        </li>
+
+        <li class="pub-entry">
+          <a href="./portfolio/advokit.html" class="pub-card-link">
+            <div class="pub-media">
+              <img src="../images/advokit/Advokit-Workshop-Session.jpg" alt="Advokit co-design workshop session with stroke survivors" loading="lazy" />
+            </div>
+            <div class="pub-info">
+              <span class="pub-title">Advokit</span>
+              <div class="pub-meta">Generative AI · LLM Integration · Full-Stack Development · Deployment · Co-design</div>
+              <div class="pub-client">PhD @ King's College London</div>
+              <div class="pub-focus">Gen-AI Paperwork</div>
+              <div class="pub-date">2025</div>
             </div>
           </a>
         </li>
 
         <li class="pub-entry">
           <a href="./portfolio/zuzenna.html" class="pub-card-link">
-            <div class="pub-media" style="overflow: hidden;">
-              <img src="../images/zuzenna/Diary-Cover.jpg" alt="Zuzenna's aphasia diary — a teal notebook with a hand-drawn rainbow heart sticker" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: center 5%;" />
+            <div class="pub-media">
+              <img src="../images/zuzenna/Diary-Cover.jpg" alt="Zuzenna's aphasia diary — a teal notebook with a hand-drawn rainbow heart sticker" loading="lazy" style="object-position: center 5%;" />
             </div>
             <div class="pub-info">
               <span class="pub-title">Zuzenna's Diary</span>
               <div class="pub-meta">Video · Photography · Conversation analysis · Workshops · Interviews</div>
-              <div class="pub-date">2024–2025</div>
-              <div class="portfolio-cta">View project →</div>
+              <div class="pub-client">PhD @ King's College London</div>
+              <div class="pub-focus">DIY AAC</div>
+              <div class="pub-date">2025</div>
             </div>
           </a>
         </li>
@@ -88,8 +81,9 @@
             <div class="pub-info">
               <span class="pub-title">Breaking Badge</span>
               <div class="pub-meta">Wearable AAC · eInk prototyping · Participatory design · Interaction analysis</div>
+              <div class="pub-client">PhD @ King's College London</div>
+              <div class="pub-focus">Wearable AAC</div>
               <div class="pub-date">2024</div>
-              <div class="portfolio-cta">View project →</div>
             </div>
           </a>
         </li>
@@ -102,18 +96,11 @@
             <div class="pub-info">
               <span class="pub-title">Watch Your Language</span>
               <div class="pub-meta">Smartwatch AAC · Participatory design · Usability evaluation</div>
+              <div class="pub-client">PhD @ King's College London</div>
+              <div class="pub-focus">Smartwatch AAC</div>
               <div class="pub-date">2023</div>
-              <div class="portfolio-cta">View project →</div>
             </div>
           </a>
-        </li>
-
-        <li class="portfolio-era-heading era-msc">
-          <span class="era-years">2020–2021</span>
-          <span class="era-marker" aria-hidden="true"></span>
-          <span class="era-copy">
-            <strong>King's MSc</strong>
-          </span>
         </li>
 
         <li class="pub-entry">
@@ -124,8 +111,9 @@
             <div class="pub-info">
               <span class="pub-title">Argupedia</span>
               <div class="pub-meta">AI argumentation · D3.js · Formal semantics · UX evaluation</div>
+              <div class="pub-client">MSc @ King's College London</div>
+              <div class="pub-focus">AI Argumentation</div>
               <div class="pub-date">2021</div>
-              <div class="portfolio-cta">View project →</div>
             </div>
           </a>
         </li>
@@ -138,18 +126,11 @@
             <div class="pub-info">
               <span class="pub-title">COVID-19 Vaccination Visualisation</span>
               <div class="pub-meta">D3.js · Data visualisation · Java preprocessing · Interaction design</div>
+              <div class="pub-client">MSc @ King's College London</div>
+              <div class="pub-focus">Data Visualisation</div>
               <div class="pub-date">2021</div>
-              <div class="portfolio-cta">View project →</div>
             </div>
           </a>
-        </li>
-
-        <li class="portfolio-era-heading era-msc">
-          <span class="era-years">2019–2020</span>
-          <span class="era-marker" aria-hidden="true"></span>
-          <span class="era-copy">
-            <strong>Bristol MSc</strong>
-          </span>
         </li>
 
         <li class="pub-entry">
@@ -160,18 +141,11 @@
             <div class="pub-info">
               <span class="pub-title">Turrellian LED Lamp</span>
               <div class="pub-meta">Affective computing · Biosensing · Embedded systems · Immersive light</div>
+              <div class="pub-client">MSc @ University of Bristol</div>
+              <div class="pub-focus">Affective Computing</div>
               <div class="pub-date">2020</div>
-              <div class="portfolio-cta">View project →</div>
             </div>
           </a>
-        </li>
-
-        <li class="portfolio-era-heading era-undergraduate">
-          <span class="era-years">2015–2019</span>
-          <span class="era-marker" aria-hidden="true"></span>
-          <span class="era-copy">
-            <strong>Exeter BA</strong>
-          </span>
         </li>
 
         <li class="pub-entry">
@@ -182,8 +156,9 @@
             <div class="pub-info">
               <span class="pub-title">High-Frequency Trading Dissertation</span>
               <div class="pub-meta">Financial markets · Market efficiency · MiFID II · Interviews</div>
+              <div class="pub-client">BA @ University of Exeter</div>
+              <div class="pub-focus">Financial Regulation</div>
               <div class="pub-date">2019</div>
-              <div class="portfolio-cta">View project →</div>
             </div>
           </a>
         </li>
@@ -196,8 +171,9 @@
             <div class="pub-info">
               <span class="pub-title">A Year at Sciences Po Grenoble</span>
               <div class="pub-meta">Study abroad · Reflective writing · Intercultural learning · Student guide</div>
-              <div class="pub-date">2017–2018</div>
-              <div class="portfolio-cta">View project →</div>
+              <div class="pub-client">BA @ University of Exeter</div>
+              <div class="pub-focus">Intercultural Reflection</div>
+              <div class="pub-date">2018</div>
             </div>
           </a>
         </li>
