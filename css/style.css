@@ -773,6 +773,11 @@ figcaption {
   margin-top: 36px;
 }
 
+.wyl-app-demo {
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
 .live-toolkit-section h3,
 .toolkit-section h3,
 .case-study-section h3 {
@@ -792,7 +797,7 @@ figcaption {
 }
 
 .live-toolkit-section h4 {
-  margin-top: 44px;
+  margin-top: 52px;
   margin-bottom: 10px;
 }
 
@@ -802,6 +807,8 @@ figcaption {
 
 .demo-video-wrap {
   position: relative;
+  overflow: hidden;
+  background: #d9dedf;
 }
 
 /* One unified width for all inline portfolio media — demo videos, the
@@ -817,6 +824,14 @@ figcaption {
   margin-right: auto;
 }
 
+/* Let the finished product carry more visual weight than the supporting
+   research documentation, echoing the large media rhythm of the reference
+   case study while keeping the rest of the page on its existing measure. */
+.live-toolkit-section .portfolio-figure:has(.demo-video-wrap),
+.live-toolkit-section .portfolio-figure.is-demo {
+  max-width: 880px;
+}
+
 .demo-video {
   width: 100%;
   height: auto;
@@ -826,43 +841,68 @@ figcaption {
 .demo-video-wrap::after {
   content: '';
   position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 76px;
+  background: linear-gradient(to top, rgba(20, 25, 28, 0.26), transparent);
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  opacity: 0.72;
+  transition: opacity 0.2s ease;
 }
 
-.demo-video-wrap.playing::after {
-  opacity: 0;
-  pointer-events: none;
+.demo-video-wrap:hover::after,
+.demo-video-wrap:focus-within::after {
+  opacity: 1;
 }
 
 .demo-replay {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  right: 14px;
+  bottom: 14px;
   z-index: 1;
-  background: rgba(255, 253, 248, 0.95);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 11px 22px;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  background: rgba(255, 253, 248, 0.92);
+  border: 1px solid rgba(36, 38, 40, 0.42);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(20, 25, 28, 0.2), inset 0 1px 0 #fff;
   font-family: Tahoma, 'Segoe UI', 'MS Sans Serif', Geneva, Verdana, sans-serif;
-  font-size: 1rem;
-  letter-spacing: 0.06em;
+  font-size: 0.92rem;
+  line-height: 1;
   color: var(--text);
   cursor: pointer;
-  white-space: nowrap;
-  transition: opacity 0.3s ease;
+  opacity: 0.82;
+  transition: opacity 0.15s ease, transform 0.15s ease, background 0.15s ease;
 }
 
-.demo-replay:hover {
+.demo-replay:hover,
+.demo-replay:focus-visible {
   background: #fff;
+  opacity: 1;
+  transform: scale(1.06);
 }
 
-.demo-video-wrap.playing .demo-replay {
-  opacity: 0;
-  pointer-events: none;
+.demo-control-play {
+  margin-left: 2px;
+}
+
+.demo-control-pause {
+  display: none;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.1em;
+}
+
+.demo-video-wrap.playing .demo-control-play {
+  display: none;
+}
+
+.demo-video-wrap.playing .demo-control-pause {
+  display: inline;
 }
 
 .toolkit-card-figure {
@@ -955,6 +995,49 @@ figcaption {
 .portfolio-back + h2 {
   margin-top: 10px;
   margin-bottom: 0;
+}
+
+.portfolio-back + .project-lockup {
+  margin-top: 8px;
+}
+
+.project-lockup {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  margin-bottom: 0;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.project-lockup h2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 1.48rem;
+}
+
+.project-logo {
+  width: 132px;
+  height: 132px;
+  flex: 0 0 132px;
+  object-fit: contain;
+}
+
+.project-logo-advokit {
+  width: 142px;
+  height: 142px;
+  flex-basis: 142px;
+  margin: -5px;
+  transform: scale(1.18);
+  transform-origin: center;
+}
+
+.project-logo-wyl {
+  border: 1px solid rgba(36, 38, 40, 0.18);
+  border-radius: 27px;
+  box-shadow: 0 7px 18px rgba(20, 25, 28, 0.13);
 }
 
 .portfolio-hero {
@@ -1175,6 +1258,7 @@ footer a:hover {
 /* Full-bleed divider rules that reach the page frame.
    Placed last so they override component margin shorthands. */
 main h2,
+.project-lockup,
 .live-toolkit-section,
 .toolkit-section,
 .project-actions,
@@ -1211,6 +1295,32 @@ h2 + .year-group-heading {
   .portfolio-header {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+
+  .project-lockup {
+    gap: 17px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .project-lockup h2 {
+    font-size: 1.2rem;
+  }
+
+  .project-logo,
+  .project-logo-advokit {
+    width: 84px;
+    height: 84px;
+    flex-basis: 84px;
+    margin: 0;
+  }
+
+  .project-logo-advokit {
+    transform: scale(1.12);
+  }
+
+  .project-logo-wyl {
+    border-radius: 18px;
   }
 
   .portfolio-header .portfolio-hero {
@@ -1452,7 +1562,7 @@ h2 + .year-group-heading {
   aspect-ratio: 1;
   overflow: hidden;
   border: 1px solid var(--border);
-  border-radius: 50%;
+  border-radius: 9px;
   background: var(--panel);
 }
 
@@ -1469,9 +1579,31 @@ h2 + .year-group-heading {
   transition: transform 0.18s ease;
 }
 
+.portfolio-list-view .project-logo-media {
+  background: #fff;
+}
+
+.portfolio-list-view .project-logo-media img {
+  object-fit: contain;
+}
+
+.portfolio-list-view .project-logo-media-advokit img {
+  padding: 2px;
+  transform: scale(1.1);
+}
+
+.portfolio-list-view .project-logo-media-wyl img {
+  border-radius: 8px;
+}
+
 .portfolio-list-view .pub-card-link:hover .pub-media img,
 .portfolio-list-view .pub-card-link:focus-visible .pub-media img {
   transform: scale(1.06);
+}
+
+.portfolio-list-view .pub-card-link:hover .project-logo-media-advokit img,
+.portfolio-list-view .pub-card-link:focus-visible .project-logo-media-advokit img {
+  transform: scale(1.16);
 }
 
 .portfolio-list-view .pub-info {
@@ -1594,7 +1726,9 @@ h2 + .year-group-heading {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .portfolio-list-view .pub-media img {
+  .portfolio-list-view .pub-media img,
+  .demo-video-wrap::after,
+  .demo-replay {
     transition: none;
   }
 }
