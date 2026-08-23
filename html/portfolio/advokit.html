@@ -19,7 +19,7 @@
       <a href="../portfolio.html" class="portfolio-back">← Portfolio</a>
 
       <div class="project-lockup project-lockup-advokit">
-        <img src="../../images/advokit/advokit-mark.png" alt="" class="project-logo project-logo-advokit" aria-hidden="true" />
+        <img src="../../images/advokit/advokit-mark.webp" alt="" class="project-logo project-logo-advokit" width="512" height="512" aria-hidden="true" />
         <h2>Advokit</h2>
       </div>
 
@@ -83,7 +83,7 @@
             <h4>Toolkit Overview</h4>
             <p>Five core sections: a homepage, benefits list, comparative table, stories page and Benefit Buddy. The homepage opens with an overview video followed by four illustrated tiles for common pathways: considering whether to apply, continuing an application, exploring community stories and learning about the project.</p>
             <figure class="portfolio-figure">
-              <div class="demo-video-wrap"><video muted playsinline preload="metadata" class="demo-video" poster="../../images/advokit/demo/Homepage-poster.jpg">
+              <div class="demo-video-wrap"><video muted playsinline preload="none" class="demo-video" poster="../../images/advokit/demo/Homepage-poster.jpg">
                 <source src="../../images/advokit/demo/Homepage.mp4?v=20260823" type="video/mp4" />
               </video><button class="demo-replay" type="button" aria-label="Play video"><span class="demo-control-play" aria-hidden="true">▶</span><span class="demo-control-pause" aria-hidden="true">Ⅱ</span></button></div>
               <figcaption>Homepage — four illustrated pathway tiles with embedded explainer video</figcaption>
@@ -92,7 +92,7 @@
             <h4>Benefits List and Table</h4>
             <p>21 welfare benefits as a navigable list and <strong>sortable comparative table</strong> — chosen over a linear document after co-designers described feeling overwhelmed. Difficulty uses a traffic-light metaphor (easy · medium · hard); perceived value a five-star rating, enabling rapid low-demand comparison.</p>
             <figure class="portfolio-figure">
-              <div class="demo-video-wrap"><video muted playsinline preload="metadata" class="demo-video" poster="../../images/advokit/demo/Benefit-Table-poster.jpg">
+              <div class="demo-video-wrap"><video muted playsinline preload="none" class="demo-video" poster="../../images/advokit/demo/Benefit-Table-poster.jpg">
                 <source src="../../images/advokit/demo/Benefit-Table.mp4" type="video/mp4" />
               </video><button class="demo-replay" type="button" aria-label="Play video"><span class="demo-control-play" aria-hidden="true">▶</span><span class="demo-control-pause" aria-hidden="true">Ⅱ</span></button></div>
               <figcaption>Comparative benefits table — sortable by difficulty and perceived value</figcaption>
@@ -101,7 +101,7 @@
             <h4>Benefit Pages</h4>
             <p>Benefit pages minimise textual density, with key information upfront and additional detail in interactive drop-downs. All text includes <strong>read-aloud with highlighting</strong>. Community-generated tips use progressive disclosure — revealing incrementally or all at once — and are printable for offline access.</p>
             <figure class="portfolio-figure">
-              <div class="demo-video-wrap"><video muted playsinline preload="metadata" class="demo-video" poster="../../images/advokit/demo/Benefit-Tips-poster.jpg">
+              <div class="demo-video-wrap"><video muted playsinline preload="none" class="demo-video" poster="../../images/advokit/demo/Benefit-Tips-poster.jpg">
                 <source src="../../images/advokit/demo/Benefit-Tips.mp4?v=20260823" type="video/mp4" />
               </video><button class="demo-replay" type="button" aria-label="Play video"><span class="demo-control-play" aria-hidden="true">▶</span><span class="demo-control-pause" aria-hidden="true">Ⅱ</span></button></div>
               <figcaption>Benefit page — progressive disclosure tips with read-aloud and print support</figcaption>
@@ -117,7 +117,7 @@
             <h4>Benefit Buddy</h4>
             <p>An <strong>LLM-powered assistant</strong> configured specifically for welfare application writing — breaking questions into steps and coaching applicants to articulate functional impacts in assessor-facing language. Structured onboarding establishes context before the conversation begins. All responses are read-aloud enabled and copy directly into application forms. Feedback buttons — Good response, Bad response, More detail, Less detail — allow refinement without additional typing.</p>
             <figure class="portfolio-figure">
-              <div class="demo-video-wrap"><video muted playsinline preload="metadata" class="demo-video" poster="../../images/advokit/demo/Benefit-Buddy-poster.jpg">
+              <div class="demo-video-wrap"><video muted playsinline preload="none" class="demo-video" poster="../../images/advokit/demo/Benefit-Buddy-poster.jpg">
                 <source src="../../images/advokit/demo/Benefit-Buddy.mp4?v=20260823" type="video/mp4" />
               </video><button class="demo-replay" type="button" aria-label="Play video"><span class="demo-control-play" aria-hidden="true">▶</span><span class="demo-control-pause" aria-hidden="true">Ⅱ</span></button></div>
               <figcaption>Benefit Buddy — structured onboarding, first-person draft answers and feedback-driven refinement</figcaption>
@@ -224,69 +224,6 @@
       <a href="https://www.goodreads.com/user/show/156002766" target="_blank" rel="noopener">Goodreads</a>
       <a href="https://letterboxd.com/Humph123/" target="_blank" rel="noopener">Letterboxd</a>
     </footer>
-    <script>
-      const demoWraps = [...document.querySelectorAll('.demo-video-wrap')];
-      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-      const setDemoState = (wrap, state) => {
-        const btn = wrap.querySelector('.demo-replay');
-        wrap.classList.toggle('playing', state === 'playing');
-        wrap.classList.toggle('ended', state === 'ended');
-        btn.setAttribute('aria-label', state === 'playing' ? 'Pause video' : state === 'ended' ? 'Replay video' : 'Play video');
-      };
-
-      const pauseOtherDemos = currentWrap => {
-        demoWraps.forEach(wrap => {
-          if (wrap === currentWrap) return;
-          const video = wrap.querySelector('video');
-          if (!video.paused) video.pause();
-        });
-      };
-
-      const playDemo = wrap => {
-        const video = wrap.querySelector('video');
-        pauseOtherDemos(wrap);
-        video.play().catch(() => setDemoState(wrap, 'paused'));
-      };
-
-      demoWraps.forEach(wrap => {
-        const video = wrap.querySelector('video');
-        const btn = wrap.querySelector('.demo-replay');
-
-        btn.addEventListener('click', () => {
-          if (!video.paused) {
-            video.pause();
-          } else {
-            if (video.ended) video.currentTime = 0;
-            playDemo(wrap);
-          }
-        });
-
-        video.addEventListener('play', () => setDemoState(wrap, 'playing'));
-        video.addEventListener('pause', () => {
-          if (!video.ended) setDemoState(wrap, 'paused');
-        });
-        video.addEventListener('ended', () => setDemoState(wrap, 'ended'));
-      });
-
-      if ('IntersectionObserver' in window && !reducedMotion.matches) {
-        const observer = new IntersectionObserver(entries => {
-          entries.forEach(entry => {
-            const video = entry.target.querySelector('video');
-            if (entry.isIntersecting && entry.intersectionRatio >= 0.6 && !video.ended) {
-              playDemo(entry.target);
-            } else if (entry.intersectionRatio < 0.35 && !video.paused) {
-              video.pause();
-            }
-          });
-        }, { threshold: [0, 0.35, 0.6, 1] });
-
-        demoWraps.forEach(wrap => observer.observe(wrap));
-      }
-
-      document.addEventListener('visibilitychange', () => {
-        if (document.hidden) demoWraps.forEach(wrap => wrap.querySelector('video').pause());
-      });
-    </script>
+    <script src="../../js/demo-videos.js" defer></script>
   </body>
 </html>
