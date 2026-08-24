@@ -67,7 +67,7 @@
 
       <div class="live-toolkit-section case-study-section-first wyl-app-demo" id="live-app">
         <h3>Walkie Talkie AAC</h3>
-        <p><strong>Walkie Talkie AAC</strong> is the live, open-source app that grew from the Breaking Badge research. It runs on iPhone and iPad, turning a familiar device into an outward-facing communication aid. Someone can show a prepared request, create a personal badge, pair speech with symbols, identify an object from a photograph or reach useful search tools with fewer steps.</p>
+        <p><strong>Walkie Talkie AAC</strong> is the live, open-source app that came directly from the Breaking Badge research. It runs on iPhone and iPad, turning a familiar device into an outward-facing communication aid. Someone can show a prepared request, create a personal badge, pair speech with symbols, identify an object from a photograph or reach useful search tools with fewer steps.</p>
 
         <h4>At a glance</h4>
         <p>The home screen keeps the app's main communication tools distinct and immediately recognisable.</p>
@@ -114,7 +114,7 @@
         </figure>
 
         <h4>Symbol Speak</h4>
-        <p>Spoken words are paired with simple symbols, giving a communication partner another way to follow the message.</p>
+        <p>Spoken words are paired with simple symbols, giving a communication partner another way to follow the message. Apple's Speech framework requests on-device recognition where supported; each latest word is then normalised and matched against a curated, bundled set of around 540 Mulberry symbols, including hand-tuned synonyms.</p>
         <figure class="portfolio-figure">
           <div class="demo-video-wrap"><video muted playsinline preload="none" class="demo-video" poster="../../images/breaking-badge/demo/video/symbol-speak-poster.jpg?v=20260823e">
             <source src="../../images/breaking-badge/demo/video/symbol-speak.mp4?v=20260823e" type="video/mp4" />
@@ -122,8 +122,11 @@
           <figcaption>Turning speech into a short sequence of symbols</figcaption>
         </figure>
 
+        <h4>Photo to Speech</h4>
+        <p>A photograph can offer several likely words for an object without uploading the image. Early builds bundled a MobileNetV2 Core ML model; the released app instead uses Vision's on-device <code>VNClassifyImageRequest</code>, removing the model from the download and substantially reducing storage.</p>
+
         <h4>Search</h4>
-        <p>A single term can be spoken aloud or opened in pictures, maps, a dictionary, Wikipedia, video or the wider web.</p>
+        <p>A single term can be spoken on-device or opened in pictures, maps, a dictionary, Wikipedia, video or the wider web. The app percent-encodes the term into a destination-specific URL and hands it to Safari, so the app itself makes no search request.</p>
         <figure class="portfolio-figure is-demo">
           <img src="../../images/breaking-badge/demo/stills/04-iphone-search.webp" alt="Walkie Talkie AAC search tools shown in an iPhone device mockup" width="2560" height="1440" loading="lazy" decoding="async" />
           <figcaption>Searching for “hospital” across several useful destinations</figcaption>

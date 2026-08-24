@@ -75,7 +75,7 @@
         <p><strong>Watch Your Language AAC</strong> is a live, open-source app for iPhone and Apple Watch. The iPhone is used to write, organise and preview personal phrases; the Watch keeps them immediately available in conversation. From the wrist, someone can show a short request, explain aphasia, retrieve an important word or follow a mindful-breathing exercise.</p>
 
         <h4>From iPhone to Apple Watch</h4>
-        <p>A phrase prepared on iPhone becomes a glanceable card on the wrist, alongside a disability badge that can be shown without beginning a longer explanation.</p>
+        <p>A phrase prepared on iPhone becomes a glanceable card on the wrist, alongside a disability badge that can be shown without beginning a longer explanation. Codable phrases, important words and preferences are stored locally and synchronized through a shared WatchConnectivity application-context layer, delivering the latest state when either device next runs.</p>
         <figure class="portfolio-figure">
           <div class="demo-video-wrap"><video muted playsinline preload="none" class="demo-video" poster="../../images/watch-your-language/demo/watch-handoff-poster.jpg">
             <source src="../../images/watch-your-language/demo/watch-handoff.mp4" type="video/mp4" />
@@ -84,7 +84,7 @@
         </figure>
 
         <h4>Phrases</h4>
-        <p>Saved requests are grouped into a short, familiar list so the right message can be shown quickly under pressure.</p>
+        <p>Saved requests are grouped into a short, familiar list so the right message can be shown quickly under pressure. On the Watch, a periodic SwiftUI timeline advances through the sentence at the chosen word interval while a long-lived <code>AVSpeechSynthesizer</code> produces on-device, language-aware speech.</p>
         <figure class="portfolio-figure">
           <div class="demo-video-wrap"><video muted playsinline preload="none" class="demo-video" poster="../../images/watch-your-language/demo/watch-phrases-poster.jpg">
             <source src="../../images/watch-your-language/demo/watch-phrases.mp4" type="video/mp4" />
@@ -93,7 +93,7 @@
         </figure>
 
         <h4>Important words</h4>
-        <p>Personally important words—such as names, locations and places of interest—can be stored and retrieved from their first letter.</p>
+        <p>Personally important words—such as names, locations and places of interest—can be stored and retrieved from their first letter. The most recently used items move to the front of an atomic JSON snapshot and synchronize between iPhone and Watch using last-modified timestamps.</p>
         <figure class="portfolio-figure">
           <div class="demo-video-wrap"><video muted playsinline preload="none" class="demo-video" poster="../../images/watch-your-language/demo/watch-word-finding-poster.jpg">
             <source src="../../images/watch-your-language/demo/watch-word-finding.mp4" type="video/mp4" />
@@ -102,7 +102,7 @@
         </figure>
 
         <h4>Mindful breathing</h4>
-        <p>A mindful-breathing exercise uses a paced visual rhythm and haptic cues to help ease communication anxiety.</p>
+        <p>A mindful-breathing exercise uses a paced visual rhythm and haptic cues to help ease communication anxiety. Each exercise is modelled as timed inhale, hold and exhale phases that keep SwiftUI scale animations and WatchKit haptics in step.</p>
         <figure class="portfolio-figure">
           <div class="demo-video-wrap"><video muted playsinline preload="none" class="demo-video" poster="../../images/watch-your-language/demo/watch-breathing-poster.jpg">
             <source src="../../images/watch-your-language/demo/watch-breathing.mp4" type="video/mp4" />
@@ -111,7 +111,7 @@
         </figure>
 
         <h4>iPhone companion</h4>
-        <p>The phone handles the slower setup work: writing a phrase, choosing an icon, checking how it will sound and adjusting voice or badge preferences. The Watch then carries only what is needed in the moment.</p>
+        <p>The phone handles the slower setup work: writing a phrase, choosing an icon, checking how it will sound and adjusting voice or badge preferences. Its preview reuses the same word-timing model and speech settings as the Watch, so what is prepared on the phone matches what will be displayed and spoken on the wrist.</p>
         <figure class="portfolio-figure is-demo">
           <img src="../../images/watch-your-language/demo/stills/01-iphone-phrase-library.webp" alt="Watch Your Language phrase library shown in an iPhone device mockup" width="2560" height="1440" loading="lazy" decoding="async" />
           <figcaption>Phrase library on iPhone</figcaption>
