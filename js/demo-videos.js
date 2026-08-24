@@ -49,13 +49,34 @@
   });
 
   if ('IntersectionObserver' in window && !reducedMotion.matches) {
+    const visibility = new Map(demoWraps.map(wrap => [wrap, 0]));
+    let previousScrollY = window.scrollY;
+
     const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        const video = entry.target.querySelector('video');
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.6 && !video.ended) playDemo(entry.target);
-        else if (entry.intersectionRatio < 0.35 && !video.paused) video.pause();
+      entries.forEach(entry => visibility.set(entry.target, entry.intersectionRatio));
+
+      const scrollingDown = window.scrollY >= previousScrollY;
+      previousScrollY = window.scrollY;
+
+      const primaryWrap = demoWraps
+        .filter(wrap => visibility.get(wrap) >= 0.35 && !wrap.querySelector('video').ended)
+        .sort((a, b) => {
+          const aTop = a.getBoundingClientRect().top;
+          const bTop = b.getBoundingClientRect().top;
+          return scrollingDown ? bTop - aTop : aTop - bTop;
+        })[0];
+
+      if (primaryWrap) {
+        const primaryVideo = primaryWrap.querySelector('video');
+        if (primaryVideo.paused) playDemo(primaryWrap);
+      }
+
+      demoWraps.forEach(wrap => {
+        if (wrap === primaryWrap || visibility.get(wrap) >= 0.2) return;
+        const video = wrap.querySelector('video');
+        if (!video.paused) video.pause();
       });
-    }, { threshold: [0, 0.35, 0.6, 1] });
+    }, { threshold: [0, 0.2, 0.35, 0.5, 0.65, 0.8, 1] });
 
     demoWraps.forEach(wrap => observer.observe(wrap));
   }
