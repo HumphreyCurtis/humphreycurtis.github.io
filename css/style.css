@@ -1040,6 +1040,20 @@ figcaption {
   box-shadow: 0 7px 18px rgba(20, 25, 28, 0.13);
 }
 
+.project-logo-breaking-badge {
+  border: 1px solid rgba(36, 38, 40, 0.18);
+  border-radius: 27px;
+  box-shadow: 0 7px 18px rgba(20, 25, 28, 0.13);
+}
+
+.walkie-demo-lead {
+  overflow: hidden;
+}
+
+.walkie-ipad-figure {
+  max-width: 760px;
+}
+
 .portfolio-hero {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -1328,6 +1342,10 @@ h2 + .year-group-heading {
     border-radius: 18px;
   }
 
+  .project-logo-breaking-badge {
+    border-radius: 18px;
+  }
+
   .portfolio-header .portfolio-hero {
     order: -1;
   }
@@ -1598,6 +1616,10 @@ h2 + .year-group-heading {
 }
 
 .portfolio-list-view .project-logo-media-wyl img {
+  border-radius: 8px;
+}
+
+.portfolio-list-view .project-logo-media-breaking-badge img {
   border-radius: 8px;
 }
 
