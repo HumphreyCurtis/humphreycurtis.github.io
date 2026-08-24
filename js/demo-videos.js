@@ -29,8 +29,7 @@
     const video = wrap.querySelector('video');
     const button = wrap.querySelector('.demo-replay');
 
-    // Keep autoplay eligible in Safari as well as Chromium. The HTML attribute
-    // is not always reflected early enough when playback begins off a poster.
+    // Set both properties before observer-triggered playback for Safari.
     video.defaultMuted = true;
     video.muted = true;
 
