@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Microsoft Research internship case study by Humphrey Curtis: a CHI 2025 survey of chronically ill people's video-calling experiences and exploratory co-design of AI meeting agents, including digital twins." />
+    <title>Designing Meeting Agents for Accessible Video Calls — Humphrey Curtis</title>
+    <link rel="stylesheet" href="../../css/style.css?v=20260827-microsoft-internship-8" />
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico" />
+  </head>
+  <body>
+    <h1>Humphrey Curtis</h1>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="../../index.html">Home</a><span class="sep"> // </span><a href="../research.html">Research</a><span class="sep"> // </span><a href="../news.html">News</a><span class="sep"> // </span><a href="../portfolio.html" class="current">Portfolio</a><span class="sep"> // </span><a href="../blog.html">Blog</a>
+    </nav>
+
+    <main>
+      <a href="../portfolio.html" class="portfolio-back">← Portfolio</a>
+      <h2>Designing Meeting Agents for Accessible Video Calls</h2>
+
+      <div class="portfolio-header">
+        <img
+          src="../../images/microsoft-internship/ditto-hero.webp"
+          alt="John's ditto, a grayscale digital twin used in a video-call demonstration"
+          class="portfolio-hero"
+          width="1540"
+          height="720"
+        />
+
+        <div class="project-sidebar">
+          <div class="project-meta-item">
+            <span class="sidebar-label">Year</span>
+            <span class="sidebar-value">June–September 2024</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="sidebar-label">Client</span>
+            <span class="sidebar-value">PhD Research Internship @ Microsoft</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="sidebar-label">Role</span>
+            <span class="sidebar-value">Research Intern · Lead Researcher</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="sidebar-label">Team</span>
+            <span class="sidebar-value">Microsoft Research Ability Team</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="sidebar-label">Methods</span>
+            <span class="sidebar-value">Online Survey · Thematic Analysis · Remote Co-design · Speculative Prototyping</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="sidebar-label">Outcome</span>
+            <span class="sidebar-value">CHI 2025 Full Paper · Exploratory Design Findings</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-actions" aria-label="Microsoft Research internship links">
+        <a href="https://doi.org/10.1145/3706598.3713193" target="_blank" rel="noopener">CHI 2025 paper</a>
+        <a href="https://www.youtube.com/watch?v=sXJ46saH-xU" target="_blank" rel="noopener">Research video</a>
+        <a href="../../resources/bibtex/video-calling-chronically-ill-2025.bib" download>BibTeX</a>
+      </div>
+
+      <p>During a research internship with the <strong>Microsoft Research Ability Team</strong>, I investigated how <strong>AI meeting agents</strong> might support chronically ill people when video calls are essential to work, healthcare and social life, but participating can intensify fatigue, brain fog, migraines, anxiety and pain.</p>
+
+      <p>The internship unfolded as two connected studies. I first documented how chronically ill people used and adapted existing video-calling tools. I then used those findings to co-design meeting agents—including digital twins—that could prepare for calls, support participation and help people catch up, without pretending to be the person or eroding their right to rest.</p>
+
+      <section class="case-study-section case-study-section-first internship-study">
+        <h3>Study One: Understanding Video Calling with Chronic Illness (n = 55)</h3>
+
+        <p>I designed and ran an accessible Microsoft Forms survey with adults living with chronic illness in the United States. Its 47 questions examined participants’ video-calling routines, facilitators, barriers and imagined “dream features”. To reduce fatigue and cognitive load, I prioritised multiple-choice questions, made written responses optional, previewed the length of each section and explicitly encouraged participants to take breaks.</p>
+
+        <p>Recruitment through disability and chronic-illness organisations produced a final sample of <strong>55 participants (n = 55)</strong>, covering <strong>128 self-reported illnesses and health conditions</strong>. I combined descriptive statistics with inductive thematic analysis of 401 written responses, then refined the themes collaboratively with the paper team.</p>
+
+        <figure class="portfolio-figure figure-constrained">
+          <img src="../../images/microsoft-internship/video-call-barriers.webp" alt="Survey infographic showing fatigue, brain fog, cognitive overload, migraines and sensory sensitivities as common video-call barriers" width="4189" height="3222" loading="lazy" />
+          <figcaption>Barriers were bodily, cognitive and emotional—and could appear before, during or after a call</figcaption>
+        </figure>
+
+        <p>Video calling was essential access infrastructure for many respondents. <strong>78% used it every day</strong>, relying on calls for employment, healthcare, therapy and social connection. Camera and microphone controls, captions, transcripts and recordings helped people adapt around fluctuating symptoms. At the same time, <strong>71% reported fatigue</strong>, while <strong>39% sometimes-to-always missed calls</strong> and <strong>38% interrupted calls</strong> because of health needs. Respondents described the hidden work of masking pain, explaining an off-camera presence, managing these unpredictable interruptions and recovering after a call.</p>
+
+        <figure class="portfolio-figure figure-constrained">
+          <img src="../../images/microsoft-internship/call-interruptions.webp" alt="Survey infographic showing missed and interrupted video calls and the duration of health-related interruptions" width="4184" height="3160" loading="lazy" />
+          <figcaption>Health-related interruptions could mean missing context, action items or the chance to contribute</figcaption>
+        </figure>
+
+        <p>The findings showed that accessibility is produced socially as well as technically. Supportive collaborators, accepted camera-off practices, permission to step away and reliable ways to catch up mattered alongside interface features. Respondents asked for better captions and transcripts, constructive meeting recaps, easier turn-taking, planned breaks and personalised interfaces that changed gradually and predictably.</p>
+
+        <p>This study became the CHI 2025 paper <a href="https://doi.org/10.1145/3706598.3713193" target="_blank" rel="noopener"><em>“I use video calling in all areas of my life”: Understanding the Video Calling Experiences of Chronically Ill People</em></a>, with Erin Beneteau, Edward Cutrell, Denae Ford, Sasa Junuzovic, Ann Paradiso, John Tang and Martez E. Mott.</p>
+
+        <iframe
+          src="https://www.youtube.com/embed/sXJ46saH-xU"
+          title="Video Calling Experiences of Chronically Ill People — CHI 2025"
+          class="portfolio-hero-embed embed-constrained portfolio-video-embed"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <p class="portfolio-video-caption">The CHI 2025 research video summarises the survey, findings and design directions.</p>
+      </section>
+
+      <section class="case-study-section internship-study internship-study-second">
+        <h3>Study Two: Exploring Meeting Agents for Accessible Video Calls (n = 8)</h3>
+
+        <p>The survey established the problem; the second study <strong>explored the potential of AI meeting agents—including digital twins—to support accessible video calls</strong>. I ran eight individual remote co-design workshops with eight people living with chronic illness (n = 8). Each session moved from grounding and critique, to mapping support across a meeting, and finally to designing how an agent might represent someone.</p>
+
+        <p>To make that speculative design space concrete, I introduced five possible forms for a meeting agent. They ranged from a lifelike copy of the participant to a clearly disembodied tool. These were prompts for discussion—not proposed solutions—and helped participants separate what an agent could do from how it might look, sound and identify itself.</p>
+
+        <div class="twin-spectrum" aria-label="Digital twin representation spectrum">
+          <div class="twin-spectrum-axis" aria-hidden="true">
+            <span>More like me</span>
+            <span>Clearly artificial</span>
+          </div>
+          <div class="twin-spectrum-grid">
+            <article class="twin-card twin-card-lifelike">
+              <img src="../../images/microsoft-internship/twin-lifelike.webp" alt="A photograph used to discuss a lifelike digital twin" width="1280" height="720" loading="lazy" />
+              <div><strong>Lifelike</strong><span>My face and voice</span></div>
+            </article>
+            <article class="twin-card twin-card-caricature">
+              <img src="../../images/microsoft-internship/twin-caricature.webp" alt="A stylised avatar used to discuss a caricature digital twin" width="1280" height="720" loading="lazy" />
+              <div><strong>Caricature</strong><span>A recognisable avatar</span></div>
+            </article>
+            <article class="twin-card twin-card-ally">
+              <img src="../../images/microsoft-internship/twin-ally.webp" alt="An avatar designed as an ally rather than a copy of its user" width="1280" height="720" loading="lazy" />
+              <div><strong>Ally</strong><span>A separate representative</span></div>
+            </article>
+            <article class="twin-card twin-card-abstract">
+              <img src="../../images/microsoft-internship/twin-abstract.webp" alt="A cartoon cat used to discuss an abstract digital twin" width="1280" height="720" loading="lazy" />
+              <div><strong>Abstract</strong><span>A playful non-human form</span></div>
+            </article>
+            <article class="twin-card twin-card-disembodied">
+              <img src="../../images/microsoft-internship/twin-disembodied.webp" alt="Microsoft Copilot mark used to discuss a disembodied meeting agent" width="1280" height="720" loading="lazy" />
+              <div><strong>Disembodied</strong><span>A tool, not a person</span></div>
+            </article>
+          </div>
+        </div>
+
+        <h4 class="workshop-stage-heading">Stage 1: Orienting Participants and Establishing Access</h4>
+        <p>I began by explaining the session, compensation and confidentiality, then established accessible ground rules. Participants were explicitly invited to pause, take a break, flag discomfort, ask me to slow down or say when something was unclear. This made fluctuating access needs part of the workshop rather than an interruption to it.</p>
+
+        <figure class="portfolio-figure workshop-board-figure workshop-board-compact">
+          <img src="../../images/microsoft-internship/boards/esther-stage-1-overview.webp" alt="Stage 1 of Esther's workshop board, showing the session overview and accessible ground rules" width="1600" height="1126" loading="lazy" />
+          <figcaption>Stage 1 — Esther’s session overview and ground rules made breaks, discomfort and changes of pace explicitly welcome.</figcaption>
+        </figure>
+
+        <h4 class="workshop-stage-heading">Stage 2: Building Rapport and Learning the Board</h4>
+        <p>A short Olympics prompt and a tic-tac-toe activity gave participants a low-pressure way to practise using sticky notes and moving around the shared whiteboard. It also gave me an early opportunity to notice interaction difficulties before asking participants to discuss chronic illness, work and AI.</p>
+
+        <figure class="portfolio-figure workshop-board-figure workshop-board-compact">
+          <img src="../../images/microsoft-internship/boards/esther-stage-2-icebreaker.webp?v=20260827-left-trim-3" alt="Stage 2 of Esther's workshop board, with an Olympics icebreaker, response notes and two sticky-note tic-tac-toe grids" width="1370" height="1500" loading="lazy" />
+          <figcaption>Stage 2 — an Olympics conversation prompt and two sticky-note tic-tac-toe grids introduced the board before the research activities.</figcaption>
+        </figure>
+
+        <h4 class="workshop-stage-heading">Stage 3: Critiquing Existing Digital Twins</h4>
+        <p>Participants watched and annotated examples already in public discussion, including Reid Hoffman’s AI-generated twin and Microsoft’s Ditto prototype. They identified what felt useful, unconvincing or harmful. Esther’s board became especially dense around accuracy, security, control and agency—including whether other people should retain access to someone through their twin.</p>
+
+        <figure class="portfolio-figure workshop-board-figure workshop-board-large">
+          <img src="../../images/microsoft-internship/boards/esther-twin-perspectives.webp?v=20260827-clean-crop" alt="Esther's anonymised co-design board critiquing digital-twin examples with notes about accuracy, security, control, agency and representation" width="2200" height="1838" loading="lazy" />
+          <figcaption>Stage 3 — Esther’s annotations around two examples surfaced concerns that later recurred across the study: accuracy, access, control, exploitation and loss of agency.</figcaption>
+        </figure>
+
+        <h4 class="workshop-stage-heading">Stage 4: Mapping Support Across a Video Call</h4>
+        <p>Participants then placed their own experiences on a before–during–after timeline, noting barriers, emotional or physical effects and possible responsibilities for an agent. This shifted the conversation away from a single futuristic stand-in and towards specific jobs: preparing context, making a live call easier to follow, recording decisions and helping someone catch up after stepping away.</p>
+
+        <figure class="portfolio-figure workshop-board-figure workshop-board-large">
+          <img src="../../images/microsoft-internship/boards/esther-video-call-timeline.webp" alt="Esther's anonymised co-design board mapping barriers and possible support before, during and after a video call" width="3000" height="1130" loading="lazy" />
+          <figcaption>Stage 4 — Esther’s green, blue and pink notes follow the meeting from preparation, through the live call, to recovery and catch-up; yellow notes mark possible agent responsibilities.</figcaption>
+        </figure>
+
+        <h4 class="workshop-stage-heading">Stage 5: Remixing an Agent’s Body and Voice</h4>
+        <p>Finally, the <strong>digital twin mixer</strong> returned to the five forms shown at the start. Participants compared and recombined their bodies and voices, then added constraints for different contexts. This made representation itself available for critique: should an agent look and sound like its user, clearly announce that it is artificial, or avoid impersonation altogether?</p>
+
+        <figure class="portfolio-figure workshop-board-figure workshop-board-large">
+          <img src="../../images/microsoft-internship/boards/anna-digital-twin-mixer.webp" alt="Anna's completed digital twin mixer, ordered from a lifelike deepfake through caricature, ally and abstract twins to a disembodied agent" width="3120" height="1282" loading="lazy" />
+          <figcaption>Stage 5 — Anna’s populated mixer retained the order from lifelike to explicitly artificial while recording reactions to both the agent’s body and voice.</figcaption>
+        </figure>
+
+        <p>Participants did not converge on one preferred appearance. Suitability changed with the meeting, relationship and task. Across the workshops, four more consequential tensions recurred.</p>
+
+        <p class="quote-note">Participant quotations use first names only and have been lightly edited for transcription clarity.</p>
+
+        <h4>Catch-up Was More Valuable Than Simulated Presence</h4>
+        <p>The clearest opportunities were bounded and assistive: preparing talking points, taking notes, tracking decisions and catching up after a break. These functions reduced meeting labour without requiring an agent to impersonate its user or make decisions independently.</p>
+        <blockquote class="research-quote">
+          <p>“I didn’t really miss the meetings because I can go back later and read the recap and action items.”</p>
+          <cite>Walter</cite>
+        </blockquote>
+
+        <h4>Absence Required Ongoing Consent</h4>
+        <p>Participants distinguished choosing not to attend from granting permanent access to their knowledge. An agent that remained available during sick leave could undermine the very boundary an accommodation was intended to protect.</p>
+        <blockquote class="research-quote">
+          <p>“It’s disconcerting to think that my choice—my agency—of prioritising my mental health could be removed by having that team still have access to my knowledge without my ongoing consent.”</p>
+          <cite>Esther</cite>
+        </blockquote>
+
+        <h4>Representation Needed to Be Legible, Not Lifelike</h4>
+        <p>Participants wanted colleagues to understand when an agent was speaking and whose interests it represented. A comfortable human-like voice could be useful, but its words, permissions and artificial status needed to remain explicit.</p>
+        <blockquote class="research-quote">
+          <p>“I like human intonation in the voice, but I want the content that it says to be very clear that it’s artificial.”</p>
+          <cite>Kirsten</cite>
+        </blockquote>
+
+        <h4>AI Could Reinforce Poor Meeting Culture</h4>
+        <p>Several scenarios originated in overloaded calendars, unclear agendas and pressure to attend. Participants questioned whether digital twins would solve those conditions or merely make it easier to schedule more meetings and expect more simultaneous participation.</p>
+        <blockquote class="research-quote">
+          <p>“We’re trying to fix cultural problems with technology, when it really just adds to the complexity and nuances.”</p>
+          <cite>Joe</cite>
+        </blockquote>
+
+        <p class="research-status-note"><strong>Research status:</strong> this co-design study was not published or developed into a product. The account above is drawn from the retained research protocol, workshop materials and complete transcripts from eight sessions, and presents recurring design tensions rather than evaluated product claims.</p>
+      </section>
+    </main>
+
+    <footer>
+      <a href="https://scholar.google.com/citations?user=t4HUO4MAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://www.linkedin.com/in/humphreycurtis1/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/HumphreyCurtis" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://twitter.com/HumphreyCurtis4" target="_blank" rel="noopener">Twitter</a>
+      <a href="https://www.goodreads.com/user/show/156002766" target="_blank" rel="noopener">Goodreads</a>
+      <a href="https://letterboxd.com/Humph123/" target="_blank" rel="noopener">Letterboxd</a>
+    </footer>
+  </body>
+</html>

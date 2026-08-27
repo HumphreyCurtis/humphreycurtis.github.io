@@ -1226,6 +1226,171 @@ figcaption {
   line-height: 1.6;
 }
 
+/* --- Microsoft Research internship case study --- */
+
+.internship-study-second {
+  margin-left: calc(-1 * var(--pad));
+  margin-right: calc(-1 * var(--pad));
+  padding-top: 32px;
+  padding-left: var(--pad);
+  padding-right: var(--pad);
+  border-top: 1px solid var(--border);
+}
+
+.research-status-note {
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.research-quote {
+  margin: 22px 0 36px;
+  padding: 2px 0 2px 20px;
+  border-left: 3px solid var(--accent);
+}
+
+.research-quote p {
+  margin: 0;
+  font-size: 0.94rem;
+  font-style: italic;
+  line-height: 1.65;
+}
+
+.research-quote cite {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.quote-note {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-style: italic;
+}
+
+.workshop-board-figure {
+  margin-top: 34px;
+  margin-bottom: 42px;
+}
+
+.workshop-board-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+.workshop-board-large {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.workshop-board-compact {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.workshop-stage-heading {
+  margin-top: 46px;
+  margin-bottom: 10px;
+  font-size: 0.96rem;
+}
+
+.workshop-stage-heading + p {
+  margin-top: 0;
+}
+
+.twin-spectrum {
+  margin: 34px 0;
+  padding: 18px;
+  border: 1px solid var(--border);
+  background: #e8e7ef;
+}
+
+.twin-spectrum-axis {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2px 12px;
+  color: #50546d;
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.twin-spectrum-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.twin-card {
+  min-width: 0;
+  border: 1px solid rgba(36, 38, 40, 0.24);
+  background: var(--panel);
+}
+
+.twin-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-bottom: 4px solid #73789b;
+}
+
+.twin-card-lifelike img { border-bottom-color: #cc7084; }
+.twin-card-caricature img { border-bottom-color: #ad8493; }
+.twin-card-ally img { border-bottom-color: #8e8395; }
+.twin-card-abstract img { border-bottom-color: #7c7897; }
+.twin-card-disembodied img { border-bottom-color: #6d6d96; }
+
+.twin-card > div {
+  min-height: 70px;
+  padding: 10px 9px;
+}
+
+.twin-card strong,
+.twin-card span {
+  display: block;
+}
+
+.twin-card strong {
+  font-size: 0.78rem;
+}
+
+.twin-card span {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 0.65rem;
+  line-height: 1.35;
+}
+
+@media (max-width: 760px) {
+  .twin-spectrum {
+    overflow-x: auto;
+    padding: 14px;
+  }
+
+  .twin-spectrum-grid {
+    grid-template-columns: repeat(5, minmax(122px, 1fr));
+  }
+
+  .twin-spectrum-axis {
+    min-width: 638px;
+  }
+
+}
+
 .pub-card-link {
   display: contents;
   color: inherit;
@@ -1283,6 +1448,7 @@ figcaption {
 
 .aphasia-support p {
   align-self: center;     /* vertically centre the text; divider still spans full height */
+  margin: 0;
 }
 
 .aphasia-logo {
@@ -1701,6 +1867,10 @@ h2 + .year-group-heading {
   object-fit: cover;
   transform: none;
   transition: transform 0.18s ease;
+}
+
+.portfolio-list-view .portfolio-image-zuzenna {
+  object-position: center 5%;
 }
 
 .portfolio-list-view .project-logo-media {

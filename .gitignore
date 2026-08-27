@@ -1,2 +1,5 @@
 .DS_Store
 tmp/
+
+# Local Microsoft Whiteboard extraction artifacts
+images/microsoft-internship/whiteboard-export/
