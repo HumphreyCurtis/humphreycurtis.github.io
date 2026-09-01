@@ -4,7 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Humphrey Curtis</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <meta name="description" content="Humphrey Curtis is a Research Associate working across human-computer interaction, accessibility and artificial intelligence." />
+    <link rel="canonical" href="https://humphreycurtis.github.io/" />
+    <meta property="og:title" content="Humphrey Curtis" />
+    <meta property="og:description" content="Human-centred AI and accessible computing for health and public services." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://humphreycurtis.github.io/" />
+    <meta property="og:image" content="https://humphreycurtis.github.io/images/site/humphrey.webp" />
+    <meta property="og:image:alt" content="Portrait of Humphrey Curtis" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="css/style.css?v=20260830-cards" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 
   </head>
@@ -12,24 +21,28 @@
     <h1>Humphrey Curtis</h1>
 
     <nav class="nav" aria-label="Primary">
-      <a href="./index.html" class="current">Home</a><span class="sep"> // </span><a href="./html/research.html">Research</a><span class="sep"> // </span><a href="./html/news.html">News</a><span class="sep"> // </span><a href="./html/portfolio.html">Portfolio</a><span class="sep"> // </span><a href="./html/blog.html">Blog</a>
+      <a href="./index.html" class="current" aria-current="page">Home</a><span class="sep"> // </span><a href="./html/portfolio.html">Portfolio</a><span class="sep"> // </span><a href="./html/research.html">Research</a><span class="sep"> // </span><a href="./html/news.html">News</a><span class="sep"> // </span><a href="./html/contact.html">Contact</a>
     </nav>
 
     <main>
-      <figure class="home-figure">
-        <img
-          src="images/site/humphrey.webp"
-          alt="Portrait of Humphrey Curtis"
-          loading="eager"
-        />
-        <figcaption>Site updated: August 2026</figcaption>
-      </figure>
-
-      <div class="home-intro">
-        <p>
-          I am a Research Associate at <a href="https://www.kcl.ac.uk/" target="_blank" rel="noopener">King's College London</a>, working across human-computer interaction, accessibility and artificial intelligence. My research co-designs communication technologies with people with aphasia, from wearable AAC to inclusive generative-AI tools. Outside research, I enjoy golf, reading, film, travel and walking my family's three dogs. I remain a long-suffering Manchester United supporter.
-        </p>
-      </div>
+      <section class="home-hero" aria-label="Introduction">
+        <figure class="home-headshot">
+          <div class="home-headshot-crop">
+            <img src="images/site/humphrey.webp" alt="Portrait of Humphrey Curtis" width="1600" height="1070" loading="eager" />
+          </div>
+          <figcaption>Site updated: August 2026</figcaption>
+        </figure>
+        <div class="home-hero-copy">
+          <p>Hi there 👋. I am a <strong>Research Associate</strong> at <a href="https://www.kcl.ac.uk/" target="_blank" rel="noopener">King’s College London</a>, working across human-computer interaction, accessibility and artificial intelligence. I design, build and evaluate human-centred AI systems—including wearable and screenless interfaces—for health, accessibility and public services. Drawing on participatory design, software development and mixed-methods evaluation, I develop new ways for people to communicate, navigate services and work with AI.</p>
+          <p>I completed my PhD in the <a href="https://www.kcl.ac.uk/research/hcc" target="_blank" rel="noopener">Human-Centred Computing Research Group</a>, supervised by <a href="https://tdjneate.github.io/" target="_blank" rel="noopener">Dr Timothy Neate</a> and <a href="https://www.kcl.ac.uk/people/rita-borgo" target="_blank" rel="noopener">Dr Rita Borgo</a>, where I co-designed wearable AAC with people with aphasia. Previously, I interned with the <a href="https://www.microsoft.com/en-us/research/group/ability/" target="_blank" rel="noopener">Ability Team at Microsoft Research</a> under <a href="https://www.microsoft.com/en-us/research/people/mamott/" target="_blank" rel="noopener">Dr Martez Mott</a>, designing and evaluating LLM-powered meeting agents for chronically ill people. I now develop <a href="https://www.advokit.uk/" target="_blank" rel="noopener">Advokit</a>, an inclusive GenAI toolkit co-designed with people with aphasia to support access to public services.</p>
+          <p>Outside research, I enjoy golf, reading, film and travel. I spend plenty of time walking my family’s three dogs and remain a long-suffering Manchester United supporter.</p>
+          <nav class="home-actions" aria-label="Key links">
+            <a href="resources/Humphrey_Curtis_CV_Short.pdf" target="_blank" rel="noopener">CV</a>
+            <a href="https://github.com/HumphreyCurtis" target="_blank" rel="noopener">GitHub</a>
+            <a href="./html/contact.html">Contact</a>
+          </nav>
+        </div>
+      </section>
 
       <section class="home-timeline" aria-label="Career and education timeline">
         <article class="home-timeline-entry">
@@ -117,45 +130,32 @@
         </article>
       </section>
 
-      <h2>Curriculum vitae</h2>
-
-      <ul class="links-plain cv-box">
-        <li><a href="resources/Humphrey_Curtis_CV_Long.pdf" target="_blank" rel="noopener">Full CV</a></li>
-        <li><a href="resources/Humphrey_Curtis_CV_Short.pdf" target="_blank" rel="noopener">1-Page CV</a></li>
-      </ul>
-
-      <h2>Contact</h2>
-
-      <address class="contact-block">
-        <h3>Email</h3>
-        <p>
-          humphrey [dot] curtis {at} kcl [dot] ac [dot] uk <em>(University)</em><br />
-          humphreywcurtis {at} gmail [dot] com <em>(Personal)</em>
-        </p>
-        <h3>Address</h3>
-        <p>
-          Department of Informatics<br />
-          King's College London<br />
-          <a href="https://www.kcl.ac.uk/visit/bush-house" target="_blank" rel="noopener">Bush House</a>,
-          <a href="https://www.kcl.ac.uk/visit/strand-campus" target="_blank" rel="noopener">Strand Campus</a><br />
-          30 Aldwych, London WC2B 4BG
-        </p>
-      </address>
-
-      <h2>Support</h2>
-
-      <div class="aphasia-support">
-        <a href="https://aphasiareconnect.org/" target="_blank" rel="noopener" class="aphasia-logo-link">
-          <img
-            src="images/logos/AphasiaReconnect.png"
-            alt="Aphasia Re-Connect logo"
-            class="aphasia-logo"
-          />
+      <section class="selected-projects" id="selected-projects" aria-labelledby="selected-projects-heading">
+        <h2 id="selected-projects-heading">Selected Projects</h2>
+        <a class="system-entry" href="./html/portfolio/advokit.html">
+          <span class="system-media"><img src="images/advokit/demo/Homepage-poster.jpg" alt="Advokit homepage displayed on a laptop" width="1280" height="720" loading="lazy" /></span>
+          <div class="system-copy"><span class="system-index">AI for Public Services</span><h3>Advokit</h3><span class="system-description">Digital welfare services exclude many people with aphasia. As a Research Associate, I built and deployed Advokit, a schema-driven GenAI toolkit with LLM drafting and safety monitoring. A three-month deployment reached 800 visitors and 2,849 page views, exposed LLM failures and informed its text-box-free redesign and eventual UK-wide Stroke Association adoption.</span></div>
         </a>
-        <p>
-          I volunteer weekly at <a href="https://aphasiareconnect.org/" target="_blank" rel="noopener">Aphasia Re-Connect</a>, a charity supporting people with aphasia in London.
-        </p>
-      </div>
+        <a class="system-entry" href="./html/portfolio/looking-past-screens.html">
+          <span class="system-media system-media-contain"><img src="images/looking-past-screens/screenless-aac-card.webp" alt="A participant evaluating a mixed-reality AAC system" width="800" height="800" loading="lazy" /></span>
+          <div class="system-copy"><span class="system-index">Discreet Communication Supports</span><h3>Wearable and Screenless AAC</h3><span class="system-description">Conventional AAC can interrupt conversation and draw unwanted attention. Across four years of PhD co-design with 200+ stroke survivors, therapists and clinicians, I built smartwatch, e-ink badge, mixed-reality smartglasses and hearable AAC systems, including on-device ML. The research identified the most viable form factors, earned publication awards and contributed to a £2m UKRI Future Leaders Fellowship.</span></div>
+        </a>
+        <a class="system-entry" href="./html/portfolio/microsoft-research-internship.html">
+          <span class="system-media"><img src="images/microsoft-internship/ditto-hero.webp" alt="Exploratory meeting-agent interface showing a participant and their digital twin" width="1600" height="900" loading="lazy" /></span>
+          <div class="system-copy"><span class="system-index">Human–AI Interaction</span><h3>AI Meeting Agents for Video Calls</h3><span class="system-description">Video calls can intensify fatigue, brain fog and pain for chronically ill people. During my Microsoft Research internship, I led an N=55 survey and used Ditto to co-design LLM-powered meeting agents. The research produced eight design recommendations and a first-authored CHI 2025 paper.</span></div>
+        </a>
+        <p class="selected-projects-more"><a href="./html/portfolio.html">View full portfolio →</a></p>
+      </section>
+
+      <section class="selected-publications" aria-labelledby="selected-publications-heading">
+        <h2 id="selected-publications-heading">Featured Publications</h2>
+        <ul class="pub-list selected-publication-list">
+          <li class="pub-entry no-media"><div class="pub-info"><span class="pub-title">Envisioning the (In)Visibility of Discreet and Wearable AAC Devices</span><div class="award"><span class="award-icon">🏆</span> Best Paper — CHI 2023</div><div class="pub-meta">Humphrey Curtis, Zihao You, William Deary, Miruna-Ioana Tudoreanu and Timothy Neate. CHI 2023.</div></div><div class="pub-links"><a href="https://doi.org/10.1145/3544548.3580936" target="_blank" rel="noopener">Paper</a></div></li>
+          <li class="pub-entry no-media"><div class="pub-info"><span class="pub-title">Watch Your Language: Using Smartwatches to Support Communication</span><div class="award"><span class="award-icon">🏆</span> Best Student Paper — ASSETS 2023</div><div class="pub-meta">Humphrey Curtis and Timothy Neate. ASSETS 2023.</div></div><div class="pub-links"><a href="https://doi.org/10.1145/3597638.3608379" target="_blank" rel="noopener">Paper</a><a href="https://github.com/HumphreyCurtis/Watch-Your-Language-AAC" target="_blank" rel="noopener">Code</a></div></li>
+          <li class="pub-entry no-media"><div class="pub-info"><span class="pub-title">Looking Past Screens: Exploring Mixed Reality and Discreet AAC Devices</span><div class="award"><span class="award-icon">🏅</span> Best Paper Nomination — ASSETS 2024</div><div class="pub-meta">Humphrey Curtis, Adam D. G. Jenkins, Seray B. Ibrahim and Timothy Neate. ASSETS 2024.</div></div><div class="pub-links"><a href="https://doi.org/10.1145/3663548.3675655" target="_blank" rel="noopener">Paper</a><a href="https://github.com/HumphreyCurtis/Prompt-AAC" target="_blank" rel="noopener">Code</a></div></li>
+        </ul>
+        <p class="selected-publications-more"><a href="./html/research.html">View all publications →</a></p>
+      </section>
     </main>
 
     <footer>
@@ -163,6 +163,7 @@
       <a href="https://www.linkedin.com/in/humphreycurtis1/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://github.com/HumphreyCurtis" target="_blank" rel="noopener">GitHub</a>
       <a href="https://twitter.com/HumphreyCurtis4" target="_blank" rel="noopener">Twitter</a>
+      <a href="./html/blog.html">Blog</a>
       <a href="https://www.goodreads.com/user/show/156002766" target="_blank" rel="noopener">Goodreads</a>
       <a href="https://letterboxd.com/Humph123/" target="_blank" rel="noopener">Letterboxd</a>
     </footer>
