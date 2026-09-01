@@ -1490,26 +1490,6 @@ figcaption {
   text-wrap: pretty;
 }
 
-.contact-intro-copy .contact-eyebrow {
-  margin-bottom: 7px;
-  color: var(--muted);
-  font-size: 0.72rem;
-  font-weight: 700;
-  font-variant: small-caps;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.contact-title {
-  margin: 0 0 14px;
-  padding: 0;
-  border: 0;
-  font-size: clamp(1.65rem, 3vw, 2.25rem);
-  font-variant: normal;
-  letter-spacing: -0.025em;
-  line-height: 1.12;
-}
-
 .contact-figure .dogs {
   display: block;
   width: 100%;
@@ -1518,14 +1498,12 @@ figcaption {
   border-radius: 3px;
   object-fit: cover;
   object-position: center;
-  box-shadow: 8px 8px 0 rgba(74, 102, 117, 0.13);
 }
 
 .contact-figure figcaption {
   margin-top: 9px;
-  padding-right: 2px;
   font-size: 0.72rem;
-  text-align: right;
+  text-align: center;
 }
 
 .contact-intro .home-actions {
@@ -2019,11 +1997,7 @@ h2 + .year-group-heading {
     width: 100%;
   }
 
-  .contact-figure .dogs { box-shadow: 6px 6px 0 rgba(74, 102, 117, 0.13); }
-
   .contact-intro-copy { grid-row: 1; }
-
-  .contact-title { font-size: 1.75rem; }
 
   .contact-intro .home-actions { justify-content: flex-start; }
 
