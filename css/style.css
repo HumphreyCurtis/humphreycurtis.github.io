@@ -623,6 +623,11 @@ figcaption {
 
 .news-text { flex: 1; }
 
+.news-links {
+  justify-content: flex-start;
+  margin-top: 6px;
+}
+
 .reviewer-section {
   margin-top: 44px;
   padding-top: 4px;
